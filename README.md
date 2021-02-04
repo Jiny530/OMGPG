@@ -1,4 +1,4 @@
-OMRPG - VR 국악기 연주 프로그램
+OMGPG - VR 국악기 연주 프로그램
 ======
 ### 시연 영상 링크 
 https://www.youtube.com/watch?v=lb8Tq72X9dQ
