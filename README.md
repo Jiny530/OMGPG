@@ -69,7 +69,7 @@ https://www.youtube.com/watch?v=lb8Tq72X9dQ
   <https://developer.oculus.com/documentation/unity/book-unity-gsg/>
 
 
-* VR 컨트롤러 기초 및 세팅  
+* VR 컨트롤러 기초 및 세팅
 
   컨트롤러 플러그인 세팅
   <https://youtu.be/NXDDRFzlzIQ>
