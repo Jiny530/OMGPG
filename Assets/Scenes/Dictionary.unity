@@ -418,7 +418,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -329.28308, y: -0.000024298353}
+  m_AnchoredPosition: {x: -329.28308, y: -0.0000076293945}
   m_SizeDelta: {x: 649.011, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &590441535
@@ -959,7 +959,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158695256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -300}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -976,7 +976,7 @@ GameObject:
   - component: {fileID: 1203821547}
   - component: {fileID: 1203821546}
   m_Layer: 0
-  m_Name: Script
+  m_Name: SceneController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1550,7 +1550,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1934491517}
   m_HandleRect: {fileID: 1934491516}
   m_Direction: 2
-  m_Value: 1.0000002
+  m_Value: 1
   m_Size: 0.69093895
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1989,7 +1989,7 @@ RectTransform:
   m_GameObject: {fileID: 2111610825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.795, y: 0.795, z: 0.795}
+  m_LocalScale: {x: 0.0025, y: 0.0025, z: 0.0025}
   m_Children:
   - {fileID: 1846093076}
   - {fileID: 1333634912}
