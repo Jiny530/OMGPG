@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Script : MonoBehaviour
+public class SceneController : MonoBehaviour
 {
     int selected_song, user_lev, user_ex, stick, stone, frame, dic_lev, volume;
     float sink;
