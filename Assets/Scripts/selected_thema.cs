@@ -30,5 +30,34 @@ public class selected_thema : MonoBehaviour
             Data.frame = index;
         }            
     }
+/*
+    public void stone_select(int index){
+
+        for (int i = 0; i < 5; i++){
+            content[i].SetActive(false);  
+        }
+        if (Data.stone == index){
+            Data.stone = -1;
+        }
+        else{
+            content[index].SetActive(true); 
+            Data.stone = index;
+        }            
+    }
+
+    public void frame_select(int index){
+
+        for (int i = 0; i < 5; i++){
+            content[i].SetActive(false);  
+        }
+        if (Data.stone == index){
+            Data.stone = -1;
+        }
+        else{
+            content[index].SetActive(true); 
+            Data.frame = index;
+        }            
+    }
+    */
 }
 
