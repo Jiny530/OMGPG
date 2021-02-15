@@ -133,7 +133,9 @@ public class OVRGrabber : MonoBehaviour
 	// visible artifacts.
     virtual public void Update()
     {
-		if (m_operatingWithoutOVRCameraRig)
+       
+
+        if (m_operatingWithoutOVRCameraRig)
         {
 		    OnUpdatedAnchors();
         }
