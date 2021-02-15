@@ -5,6 +5,7 @@ using UnityEngine;
 public class Note : MonoBehaviour
 {
     public float noteSpeed = 400;
+    public string[] tmpAns = { "pg7", "pg14", "pg12", "pg14", "pg12", "pg14", "pg12", "pg14", "pg7", "pg14", "pg12", "pg14", "pg7", "pg5", "pg7" };//상사화
 
     UnityEngine.UI.Image noteImage;
 
