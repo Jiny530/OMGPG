@@ -815,7 +815,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -479, y: 238.54}
+  m_AnchoredPosition: {x: -893, y: 238.54}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &281633649 stripped
@@ -2485,7 +2485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f567c0d13c2bb4f4fa1d90817265573b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpm: 89.5
+  bpm: 107
   tfNoteAppear: {fileID: 258654601}
   goNote: {fileID: 9084493388823596029, guid: db941a13c64df6843b358fa5326a48cb, type: 3}
 --- !u!114 &1192094455
@@ -2539,17 +2539,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267042495}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.74531245, y: 0.74531245, z: 0.74531245}
+  m_LocalPosition: {x: 0, y: 0, z: 848}
+  m_LocalScale: {x: 0.5733173, y: 0.5733173, z: 0.5733173}
   m_Children:
   - {fileID: 2131566579}
-  m_Father: {fileID: 1607969119}
-  m_RootOrder: 1
+  m_Father: {fileID: 1464496137}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13.999756, y: 44}
-  m_SizeDelta: {x: -616.33453, y: -337.81262}
+  m_AnchoredPosition: {x: -18.3074, y: -26.569214}
+  m_SizeDelta: {x: 690.88983, y: 382.18735}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1267042497
 MonoBehaviour:
@@ -3025,6 +3025,7 @@ Transform:
   - {fileID: 1945299994}
   - {fileID: 1061491458}
   - {fileID: 431612117}
+  - {fileID: 1267042496}
   m_Father: {fileID: 380134645}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3246,7 +3247,6 @@ RectTransform:
   m_LocalScale: {x: 0.73055553, y: 0.73055553, z: 0.73055553}
   m_Children:
   - {fileID: 1192094452}
-  - {fileID: 1267042496}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -45.000004, z: 0}
@@ -3718,8 +3718,8 @@ GameObject:
   - component: {fileID: 2032600317}
   - component: {fileID: 2032600316}
   - component: {fileID: 2032600315}
-  - component: {fileID: 2032600314}
   - component: {fileID: 2032600313}
+  - component: {fileID: 2032600314}
   m_Layer: 5
   m_Name: CenterFrame
   m_TagString: Untagged
@@ -3759,7 +3759,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -7, y: 0}
+  m_Offset: {x: -450, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3794,7 +3794,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2712d1126696dbc499fd132635af97ca, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9b8185b1208381242bececa3894490d2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.505
   m_Pitch: 1

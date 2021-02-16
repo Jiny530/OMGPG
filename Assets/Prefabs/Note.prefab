@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -526.7617, y: 255.4199}
+  m_AnchoredPosition: {x: -670.3, y: 255.4199}
   m_SizeDelta: {x: 42, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9084493388823596025
@@ -90,6 +90,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteSpeed: 400
+  tmpAns:
+  - pg7
+  - pg14
+  - pg12
+  - pg14
+  - pg12
+  - pg14
+  - pg12
+  - pg14
+  - pg7
+  - pg14
+  - pg12
+  - pg14
+  - pg7
+  - pg5
+  - pg7
 --- !u!61 &4028049152943090565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -103,7 +119,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.24414062, y: -0.040161133}
+  m_Offset: {x: -0.08192825, y: 0.12271118}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -114,7 +130,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.1484375, y: 9.967041}
+  m_Size: {x: 23.017082, y: 83.35016}
   m_EdgeRadius: 0
 --- !u!50 &1558781833907052419
 Rigidbody2D:
