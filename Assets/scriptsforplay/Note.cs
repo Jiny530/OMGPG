@@ -5,7 +5,7 @@ using UnityEngine;
 public class Note : MonoBehaviour
 {
     public float noteSpeed = 400;
-    //public static string[] tmpAns = { "pg7", "pg14", "pg12", "pg14", "pg12", "pg14", "pg12", "pg14", "pg7", "pg14", "pg12", "pg14", "pg7", "pg5", "pg7" };//상사화
+    //public static string[] strAns = { "pg7", "pg14", "pg12", "pg14", "pg12", "pg14", "pg12", "pg14", "pg7", "pg14", "pg12", "pg14", "pg7", "pg5", "pg7" };//상사화
     public static int[] tmpAns = { 7, 14, 12, 14, 12, 14, 12, 14, 7, 14, 12, 14, 7, 5, 7 };//상사화
     public int ans; 
     UnityEngine.UI.Image noteImage;
