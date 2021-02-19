@@ -176,7 +176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81656338}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.4999995, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1651094988}
@@ -444,7 +444,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232746549}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: -3.5238037, z: -2.956822}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 718072923}
@@ -606,7 +606,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260735643}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: -3.5238037, z: -2.956822}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1407469377}
@@ -925,7 +925,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381195664}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.0999994, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 301467924}
@@ -1223,7 +1223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829180610}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.10000038, y: -3.5238037, z: -2.956822}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 393034122}
@@ -1515,9 +1515,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
-  m_Height: 2
+  m_Height: 1.9364592
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0.00000007949575, y: -0.031770434, z: 0.000000080050754}
 --- !u!23 &961058938
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1587,10 +1587,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961058935}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_IsTrigger: 1
+  m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!95 &961058942
@@ -1700,7 +1700,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983856514}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13, y: -3.5238037, z: -2.956822}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 554354150}
@@ -1833,7 +1833,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037070220}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.9, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1825946339}
@@ -2259,7 +2259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150393096}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.299999, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2027708443}
@@ -2474,6 +2474,366 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8297589562027126606, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562027126606, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562027126606, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZLimit.limit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562027126607, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 4.3939724
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562027126607, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.013443492
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562027126607, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.36563575
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562027126607, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -1.6715521
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562027126705, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_TagString
+      value: pg10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562037774776, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562037774776, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562037774776, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 7.300001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562037774776, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZLimit.limit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562037774780, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_TagString
+      value: pg15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562191653544, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562191653544, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562191653544, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZLimit.limit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562191653545, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.5337049
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562191653545, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 4.446316
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562191653545, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.0041249953
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562191653545, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.32497942
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562191653545, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -1.666348
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562191653547, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_TagString
+      value: pg9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562304327970, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562304327970, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562304327970, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -2.9339542
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562304327970, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZLimit.limit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562304327971, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 4.4244742
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562304327971, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.013376512
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562304327971, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.35324034
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562304327971, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -1.7164336
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562304327973, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_TagString
+      value: pg6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562586360871, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562586360871, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562586360871, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -2.9339542
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562586360871, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZLimit.limit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562586360872, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 4.424157
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562586360872, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.027101003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562586360872, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.3569651
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562586360872, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -1.625522
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562586360874, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_TagString
+      value: pg7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562680099753, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562680099753, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562680099753, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -2.9339542
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562680099753, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZLimit.limit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562680099756, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_TagString
+      value: pg1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562705801764, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562705801764, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562705801764, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZLimit.limit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562705801765, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.6170596
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562705801765, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 4.3266497
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562705801765, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.013095997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562705801765, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.30026454
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562705801765, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -1.6903164
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562705801767, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_TagString
+      value: pg8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562959829308, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562959829308, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562959829308, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -1.2999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562959829308, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -2.9339542
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562959829308, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZLimit.limit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562959829311, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_TagString
+      value: pg4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562970339388, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562970339388, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562970339388, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZLimit.limit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589562970339391, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_TagString
+      value: pg13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563043663754, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563043663754, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563043663754, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -2.9339542
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563043663754, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZLimit.limit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563043663755, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 4.354534
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563043663755, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.036629997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563043663755, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.3704615
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563043663755, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -1.6366448
+      objectReference: {fileID: 0}
     - target: {fileID: 8297589563043663757, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
         type: 3}
       propertyPath: m_TagString
@@ -2553,6 +2913,181 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PG
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563081562300, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563081562300, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563081562300, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZLimit.limit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563081562302, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_TagString
+      value: pg14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563191145497, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563191145497, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563191145497, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -2.9339542
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563191145497, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZLimit.limit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563191145498, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.7011749
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563191145498, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 4.410557
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563191145498, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.0632485
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563191145498, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.4132001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563191145498, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -1.5938249
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563191145500, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_TagString
+      value: pg5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563271591822, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563271591822, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563271591822, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -2.9339542
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563271591822, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZLimit.limit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563271591921, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_TagString
+      value: pg2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563610751580, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563610751580, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563610751580, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -1.2999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563610751580, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZLimit.limit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563610751583, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_TagString
+      value: pg11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563774093632, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_TagString
+      value: pg3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563774093661, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563774093661, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563774093661, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.09555973
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563774093661, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.16771689
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563774093661, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.23364526
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563774093661, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZLimit.limit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563852750069, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563852750069, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563852750069, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_AngularZLimit.limit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297589563852750072, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
+        type: 3}
+      propertyPath: m_TagString
+      value: pg12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95dcbd7f94a35924baf72a9ff8fd31c5, type: 3}
@@ -2668,7 +3203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272438704}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1824705783}
@@ -2947,7 +3482,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404355926}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.3999996, y: -3.5238037, z: -2.956822}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1793504225}
@@ -3250,7 +3785,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718216842}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1162023987}
@@ -3377,7 +3912,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742448531}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.3999996, y: -3.5238037, z: -2.956822}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 341897614}
@@ -3504,7 +4039,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745553759}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.799999, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 985048093}
@@ -3683,6 +4218,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: _trackingOriginType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
@@ -4055,7 +4594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112825162}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.5, y: -3.5238037, z: -2.956822}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 370355423}
@@ -4182,7 +4721,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123789955}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.5, y: -3.5238037, z: -2.956822}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1614061973}
