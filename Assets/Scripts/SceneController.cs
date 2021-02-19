@@ -12,7 +12,6 @@ public class SceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -49,7 +48,7 @@ public class SceneController : MonoBehaviour
     public void go_Main()
     {
         //dataSave();
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("RealMain");
     }
 
     public void go_Dictionary()
