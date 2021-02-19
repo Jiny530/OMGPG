@@ -60,3 +60,4 @@ crashlytics-build.properties
 
 # object files
 *.obj
+Assets/Oculus/VR/Meshes/Cone.obj.meta
