@@ -12,13 +12,19 @@ public class collision : MonoBehaviour
     //public GameObject[] pyeongyeong;  //PG1, PG2, PG3, PG4, PG5, PG6, PG7, PG8, PG9, PG10, PG11, PG12, PG13, PG14, PG15, PG16;
     public string[] tags;
     public static int hitCheck;
-
+    snare snares;
+    void Start(){
+        snares = GetComponent<snare>();
+    }
     public void OnCollisionEnter(Collision col)
     {   
         for(int i=0;i<16;i++){
             if (col.collider.CompareTag(tags[i])){
                 pg_sound[i].PlayOneShot(pg_sound[i].clip);
                 hitCheck = i;
+                if(snares.snares[i].activeSelf == true){ //collision으로는 자식객체 접근 불가능해서 그냥 snare로 접근
+                    snares.snares[i].SetActive(false);
+                }
                 break;
             }
         }
