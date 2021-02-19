@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -30,9 +31,11 @@ public class PlayerInput : MonoBehaviour
             }
             collision.hitCheck = -1;//검사 완료 후 돌 상태 -1로 돌려놓기
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        if (OVRInput.GetDown(OVRInput.Button.Two, OVRInput.Controller.Touch))
         {
-            theTimingManager.CheckTiming();
+            SceneManager.LoadScene("Main");
         }
+
     }
 }
