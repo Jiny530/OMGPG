@@ -84,4 +84,10 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Sync");
     }
 
+    public void go_Loading()
+    {
+        //dataSave();
+        SceneManager.LoadScene("Loading");
+    }
+
 }
