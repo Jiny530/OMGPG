@@ -5,9 +5,11 @@ using UnityEngine;
 public class SoundEffect : MonoBehaviour
 {
 
-    private AudioSource theAudio;
+    public AudioSource theAudio;
+    public AudioSource PGAudio;
+    public AudioSource BackgroundAudio;
 
-    [SerializeField] private AudioClip clip;
+    [SerializeField] public AudioClip clip;
 
     // Start is called before the first frame update
     void Start()
@@ -24,5 +26,20 @@ public class SoundEffect : MonoBehaviour
 
     public void PlaySE() {
         theAudio.Play();
+    }
+
+    public void SetPGVolume(float volume)
+    {
+        PGAudio.volume = volume;
+    }
+
+    public void SetBackgroundVolume(float volume)
+    {
+        BackgroundAudio.volume = volume;
+    }
+
+    public void SetButtonVolume(float volume)
+    {
+        theAudio.volume = volume;
     }
 }
