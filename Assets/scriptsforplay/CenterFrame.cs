@@ -4,28 +4,30 @@ using UnityEngine;
 
 public class CenterFrame : MonoBehaviour
 {
-    AudioSource myAudio;
-    bool musicStart = false;
     // Start is called before the first frame update
-    void Start()
+    double nowTime = 0;
+    double enterT;
+   
+    private void Update()
     {
-        myAudio = GetComponent<AudioSource>();
+        nowTime += Time.deltaTime;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!musicStart)
+        if (collision.CompareTag("Note"))
         {
-            if (collision.CompareTag("Note"))
-            {
-                myAudio.Play();//노트가 딱 지나갈 때 노래가 재생.
-                musicStart = true;
-            }
-        }
-        
+         
+            //Debug.Log("ENTER "+nowTime);
+            enterT = nowTime;
+        }   
     }
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("Note"))
+        {
+            //Debug.Log("EXIT " + nowTime);
+            Debug.Log(nowTime - enterT);
+            Debug.Log("지금 답 "+ collision.GetComponent<Note>().ans);
+        }
     }
 }
