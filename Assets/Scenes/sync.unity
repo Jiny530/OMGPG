@@ -586,7 +586,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1.2, y: -0.000050306}
-  m_SizeDelta: {x: 42.123863, y: 99.998474}
+  m_SizeDelta: {x: 40, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1207625363
 BoxCollider2D:
@@ -601,7 +601,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -7, y: 0}
+  m_Offset: {x: 0.007885456, y: -0.7738457}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -612,7 +612,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.761007, y: 100}
+  m_Size: {x: 17.082039, y: 94.884514}
   m_EdgeRadius: 0
 --- !u!114 &1207625364
 MonoBehaviour:
@@ -637,7 +637,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a64f44396dc5f9443b89af0b8e3af41a, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -769,8 +769,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1427239144}
   - component: {fileID: 1427239147}
-  - component: {fileID: 1427239146}
   - component: {fileID: 1427239145}
+  - component: {fileID: 1427239146}
   m_Layer: 5
   m_Name: Note
   m_TagString: Untagged
@@ -837,7 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f567c0d13c2bb4f4fa1d90817265573b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpm: 89.5
+  bpm: 85.9
   tfNoteAppear: {fileID: 1488977756}
   goNote: {fileID: 9084493388823596029, guid: db941a13c64df6843b358fa5326a48cb, type: 3}
 --- !u!114 &1427239147
