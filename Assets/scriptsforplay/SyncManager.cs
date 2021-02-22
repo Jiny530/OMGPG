@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/* play scene의 playerInput과 동일한 역할, 대신 시간값을 측정하도록 수정*/
+/* play scene의 playerInput과 동일한 역할, 대신 시간값을 측정하도록 수정  sync bpm은 105*/
 public class SyncManager : MonoBehaviour
 {
     TimingManager theTimingManager;
@@ -25,7 +25,7 @@ public class SyncManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log(timer);
+            Debug.Log("userTime "+timer);
         }
       /*  if (collision.hitCheck != -1)//검사 후 돌 상태 -1로 돌려놓기.
         {

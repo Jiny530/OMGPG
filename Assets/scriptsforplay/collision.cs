@@ -11,7 +11,7 @@ public class collision : MonoBehaviour
     public AudioSource[] pg_sound;  //pg1, pg2, pg3, pg4, pg5, pg6, pg7, pg8, pg9, pg10, pg11, pg12, pg13, pg14, pg15, pg16;
     //public GameObject[] pyeongyeong;  //PG1, PG2, PG3, PG4, PG5, PG6, PG7, PG8, PG9, PG10, PG11, PG12, PG13, PG14, PG15, PG16;
     public string[] tags;
-    public static int hitCheck;
+    public static int hitCheck=-1;
     snare snares;
     public float m_countToStop;
     public bool isTouching = false;
