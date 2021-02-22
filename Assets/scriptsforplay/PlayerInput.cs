@@ -41,7 +41,7 @@ public class PlayerInput : MonoBehaviour
 
         if (OVRInput.GetDown(OVRInput.Button.Two, OVRInput.Controller.Touch))
         {
-            SceneManager.LoadScene("Main");
+            SceneManager.LoadScene("RealMain");
         }
     }
 }
