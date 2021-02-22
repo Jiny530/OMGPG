@@ -31,8 +31,7 @@ public class PlayerInput : MonoBehaviour
             }
             else
             {//디버깅용
-                Debug.Log("틀린 돌 "+collision.hitCheck);
-
+                Debug.Log("틀린 돌 "+collision.hitCheck+"정답은  "+TimingManager.noteAns);
             }
             collision.hitCheck = -1;//검사 완료 후 돌 상태 -1로 돌려놓기
         }
