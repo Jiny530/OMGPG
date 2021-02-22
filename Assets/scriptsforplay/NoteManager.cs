@@ -12,7 +12,7 @@ public class NoteManager : MonoBehaviour
 
     static double songDelay = -26.6d;//상사화 기준 딜레이..(25.6)-> data에 각 곡 전주 길이 저장해놓고 가져와야 함(선택된 곡에 맞게)
     static double moveDelay = 1.5d;//일정값.
-    double currentTime = songDelay + moveDelay;
+    public static double currentTime = songDelay + moveDelay;
   //  double currentTime = 0;
 
 

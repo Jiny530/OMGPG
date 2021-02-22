@@ -14,6 +14,7 @@ public class collision : MonoBehaviour
     public static int hitCheck;
     snare snares;
     public float m_countToStop;
+    public bool isTouching = false;
 
     void Start()
     {
@@ -40,11 +41,12 @@ public class collision : MonoBehaviour
 
         for (int i = 0; i < 16; i++)
         {
-            if (col.collider.CompareTag(tags[i]))
+            if (col.collider.CompareTag(tags[i]) && !isTouching)
             {
+                isTouching = true;
                 pg_sound[i].PlayOneShot(pg_sound[i].clip);
                 hitCheck = i;
-                if (snares.snares[i].activeSelf == true)
+                if (snares.snares[i].activeSelf)
                 { //collision으로는 자식객체 접근 불가능해서 그냥 snare로 접근
                     snares.snares[i].SetActive(false);
                 }
@@ -66,5 +68,10 @@ public class collision : MonoBehaviour
         OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
         m_countToStop = 0;
 
+    }
+
+    public void OnCollisionExit(Collision col)
+    {
+        isTouching = false;
     }
 }
