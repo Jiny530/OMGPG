@@ -6,7 +6,6 @@ public class snare_off : MonoBehaviour
 {
     // Start is called before the first frame update
     void off(){
-        gameObject.SetActive(false);
-        print("비활성화");
+        transform.parent.gameObject.SetActive(false);
     }
 }
