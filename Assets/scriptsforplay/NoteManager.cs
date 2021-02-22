@@ -10,10 +10,10 @@ public class NoteManager : MonoBehaviour
     bool playActive= true;
     int delay;
 
-    static double songDelay = -25.6d;//상사화 기준 딜레이..(25.6)-> data에 각 곡 전주 길이 저장해놓고 가져와야 함(선택된 곡에 맞게)
+    static double songDelay = -26.6d;//상사화 기준 딜레이..(25.6)-> data에 각 곡 전주 길이 저장해놓고 가져와야 함(선택된 곡에 맞게)
     static double moveDelay = 1.5d;//일정값.
     double currentTime = songDelay + moveDelay;
-//    double currentTime = 0;
+  //  double currentTime = 0;
 
 
     [SerializeField] Transform tfNoteAppear = null; //노트가 생겨날 위치
@@ -31,14 +31,16 @@ public class NoteManager : MonoBehaviour
     {
         
         currentTime += Time.deltaTime;//1초씩 증가
-        if (noteCnt > Note.tmpAns.Length)
+        if (noteCnt >= Note.tmpAns.Length)
         {
             delay++;
             playActive = false;
+            Debug.Log("false 되었는데여...ㅜ");
+            SceneManager.LoadScene("Main");
             //팝업 엑티브
             if (delay>=4)//조금 더 기다려줘야 하잖아,.. 그래서 조금 딜레이를 추가해봄.. 검은 바 끝까지 가는 시간 3초.(측정값)
             {
-                SceneManager.LoadScene("Main");//일단은 종료되도록 함...->팝업을 새로운 신으로 팔지, 플레이 신에 유아이를 새로 파서 눈앞에 붙일지 고민!
+                SceneManager.LoadScene("RealMain");//일단은 종료되도록 함...->팝업을 새로운 신으로 팔지, 플레이 신에 유아이를 새로 파서 눈앞에 붙일지 고민!
             }
         }
         if (currentTime >= 180d / bpm&&playActive)
