@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Data : MonoBehaviour
 {
-
     string [] song_list = {"Free", "상사화", "Hedwig's Theme"};
     public static int[] bpms = { 105, 107, 0 };
     public static double[] songDelay = {0,15.0,0};
@@ -19,10 +18,7 @@ public class Data : MonoBehaviour
     public static int stone = -1;
     public static int frame = -1;
     public static int stick = -1;
-
-
     public static double usersyncDelay;
-
     int[] top_score= { 0, 0, 0 };
 
 }

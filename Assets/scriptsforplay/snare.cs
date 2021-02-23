@@ -12,7 +12,7 @@ public class snare : MonoBehaviour
     // 전체적으로 노트매니저와 같이가도 좋을거같음.
 
     public GameObject[] snares;
-    double currentTime = NoteManager.currentTime + 2; //곡 시작보다 2초 빨리 올가미 나오게 하려고. 근데 시간 좀 이상한듯
+    double currentTime = NoteManager.currentTime;
     int num = 0; //현재 정답 순서
     public float bpm = 107;
     public bool start_sign = true;
@@ -35,5 +35,17 @@ public class snare : MonoBehaviour
             num++;
         }
     }
+
+    /*안쓰게 됐는데 혹시몰라서 남겨둠
+    void snare_effect(string ans){ 
+        // 태그에 맞는 편경의 자식프레임 활성화
+        for (int i=0;i<16;i++){
+            if (snares[i].transform.parent.gameObject.CompareTag(ans)){
+                snares[i].SetActive(true); 
+                // 활성화 되자마자 애니메이션 시작, 애니메이션 시작되고 끝까지 종료되면 false
+                break;
+            }
+        }
+    }*/
 
 }
