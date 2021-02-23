@@ -16,7 +16,7 @@ public class Data : MonoBehaviour
 
     public int[] top_score = new int[4];
 
-    public static int selected_song, user_lev, user_ex, dic_lev, volume;
+    public static int selected_song=1, user_lev, user_ex, dic_lev, volume;
     public static double usersyncDelay;
     public static int stone = -1;
     public static int frame = -1;
