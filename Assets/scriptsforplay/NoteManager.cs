@@ -14,7 +14,12 @@ public class NoteManager : MonoBehaviour
     public static double currentTime = Data.songDelay[Data.selected_song]+1.5d;
 
     [SerializeField] Transform tfNoteAppear = null; //노트가 생겨날 위치
-    [SerializeField] GameObject goNote = null; 
+    [SerializeField] GameObject goNote = null;
+    [SerializeField] GameObject Level_completed;
+    [SerializeField] GameObject Level_failed;
+    [SerializeField] GameObject PG;
+    [SerializeField] GameObject laser;
+    [SerializeField] GameObject gaktoe;
 
     TimingManager theTimingManager;
 
@@ -27,6 +32,10 @@ public class NoteManager : MonoBehaviour
     void Update()
     {
         currentTime += Time.deltaTime;
+        if (currentTime >= 5)
+        {
+            Level_completed.SetActive(true);
+        }
         if (noteCnt >= Data.answers[Data.selected_song].Length)
         {
             delay +=Time.deltaTime;
@@ -34,7 +43,10 @@ public class NoteManager : MonoBehaviour
             //팝업 엑티브
             if (delay>=4)
             {
-                SceneManager.LoadScene("RealMain");
+                Level_completed.SetActive(true);
+                PG.SetActive(false);
+                gaktoe.SetActive(false);
+                laser.SetActive(true);
             }
         }
         if (currentTime >= 60d*hit_term / bpm&&playActive)

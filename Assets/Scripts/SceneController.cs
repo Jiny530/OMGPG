@@ -78,6 +78,12 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Play");
     }
 
+    public void re_Play()
+    {
+        //dataSave();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void go_Sync()
     {
         //dataSave();
