@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: cfc356fc6ef2118408501accb9545175
+=======
+<<<<<<< HEAD:Assets/3Dobject/gaktoe.obj.meta
+guid: 78e66e17fff980f4a900a3dd69584afe
+=======
+guid: cfc356fc6ef2118408501accb9545175
+>>>>>>> 201ee5c1c8a1346af8273625bdf8281086e57649:Assets/3Dobject/gp.obj.meta
+>>>>>>> 201ee5c1c8a1346af8273625bdf8281086e57649
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
