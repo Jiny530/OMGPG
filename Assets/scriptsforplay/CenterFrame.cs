@@ -7,6 +7,7 @@ public class CenterFrame : MonoBehaviour
     // Start is called before the first frame update
     double nowTime = 0;
     double enterT;
+    public static double center;
     bool musicStart;
     AudioSource myAudio;
     private void Start()
@@ -28,7 +29,7 @@ public class CenterFrame : MonoBehaviour
             }
             Debug.Log("ENTER "+nowTime);
             enterT = nowTime;
-        }   
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -36,6 +37,7 @@ public class CenterFrame : MonoBehaviour
         {
             //Debug.Log("EXIT " + nowTime);
             //Debug.Log(nowTime - enterT);
+            center = (nowTime + enterT)/2;
         }
     }
 }
