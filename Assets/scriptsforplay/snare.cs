@@ -1,10 +1,4 @@
-﻿using System.Collections;
-using System;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using System.Diagnostics;
+﻿using UnityEngine;
 
 public class snare : MonoBehaviour
 {
@@ -12,26 +6,27 @@ public class snare : MonoBehaviour
     // 전체적으로 노트매니저와 같이가도 좋을거같음.
 
     public GameObject[] snares;
-    double currentTime = NoteManager.currentTime;
-    int num = 0; //현재 정답 순서
-    public float bpm = 107;
+    double currentTime = Data.songDelay[Data.selected_song]+1.5d;
+    int hit_term = Data.hit_terms[Data.selected_song];
+    public float bpm = Data.bpms[Data.selected_song];
     public bool start_sign = true;
+    int num = 0; //현재 정답 순서
 
     public void Update()
     {
         currentTime += Time.deltaTime;
         if (currentTime >= 0 && start_sign)
         {
-            snares[Note.tmpAns[num]].SetActive(true);  
+            snares[Data.answers[Data.selected_song][num]].SetActive(true);  
             num++;
             start_sign = false;
         }
-        if (currentTime >= 180d / bpm && num < Note.tmpAns.Length)
+        if (currentTime >= 60d*hit_term / bpm && num < Data.answers[Data.selected_song].Length)
         {
             // 다음 비트 나올 간격이 지나면 다음올가미도 활성화
             //snare_effect(Note.tmpAns[num]);
-            snares[Note.tmpAns[num]].SetActive(true); 
-            currentTime -= 180d / bpm;
+            snares[Data.answers[Data.selected_song][num]].SetActive(true); 
+            currentTime -= 60d*hit_term / bpm;
             num++;
         }
     }
