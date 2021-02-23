@@ -25,7 +25,10 @@ public class TimingManager : MonoBehaviour
                               Center.localPosition.x + timingRect[i].rect.width / 2);//하나의 판정 범위 0이 제일 좁고, bad로 갈 수록 범위 커짐
         }
     }
-
+    private void Update()
+    {
+        //AnsDebug();//디버깅용 여기에는 원래 업데이트 함수 필요없음.
+    }
     public int CheckTiming()
     {
         for(int i=0; i < boxNoteList.Count; i++)//각각 판정 단계 만큼 반복문

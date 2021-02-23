@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/songs/상사화_편경_blank.ogg.meta
+guid: bc8f7f91a951aa245adf6ce52e69fd8c
+=======
 guid: 0edbc1480a9778e49b826664eecedd48
+>>>>>>> 7127540bfad0df6c8a3510d51a99bd114e05addb:Assets/songs/sync_120.mp3.meta
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6
