@@ -12,25 +12,25 @@ public class snare : MonoBehaviour
     // 전체적으로 노트매니저와 같이가도 좋을거같음.
 
     public GameObject[] snares;
-    double currentTime = 0d;
+    double currentTime = NoteManager.currentTime;
     int num = 0; //현재 정답 순서
     public float bpm = 107;
-
-    public void Start()
-    {
-        snares[Note.tmpAns[num]].SetActive(true);  //일단은 시작하자마자 올가미
-        num++;
-    }
+    public bool start_sign = true;
 
     public void Update()
     {
         currentTime += Time.deltaTime;
+        if (currentTime >= 0 && start_sign)
+        {
+            snares[Note.tmpAns[num]].SetActive(true);  
+            num++;
+            start_sign = false;
+        }
         if (currentTime >= 180d / bpm && num < Note.tmpAns.Length)
         {
             // 다음 비트 나올 간격이 지나면 다음올가미도 활성화
             //snare_effect(Note.tmpAns[num]);
             snares[Note.tmpAns[num]].SetActive(true); 
-            print(Note.tmpAns[num]+"활성화");
             currentTime -= 180d / bpm;
             num++;
         }

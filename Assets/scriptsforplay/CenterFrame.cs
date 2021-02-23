@@ -7,27 +7,37 @@ public class CenterFrame : MonoBehaviour
     // Start is called before the first frame update
     double nowTime = 0;
     double enterT;
-   
+    public static double center;
+    bool musicStart;
+    AudioSource myAudio;
+    private void Start()
+    {
+        myAudio = GetComponent<AudioSource>();
+    }
     private void Update()
     {
         nowTime += Time.deltaTime;
     }
     private void OnTriggerEnter2D(Collider2D collision)
-    {
+    { 
         if (collision.CompareTag("Note"))
         {
-         
-            //Debug.Log("ENTER "+nowTime);
+            if (!musicStart)
+            {
+                myAudio.Play();
+                musicStart = true; 
+            }
+            Debug.Log("ENTER "+nowTime);
             enterT = nowTime;
-        }   
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Note"))
         {
             //Debug.Log("EXIT " + nowTime);
-            Debug.Log(nowTime - enterT);
-            Debug.Log("지금 답 "+ collision.GetComponent<Note>().ans);
+            //Debug.Log(nowTime - enterT);
+            center = (nowTime + enterT)/2;
         }
     }
 }

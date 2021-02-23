@@ -8,7 +8,7 @@ public class TimingManager : MonoBehaviour
     //생성된 노트들을 리스트에 담아서 잘 범위에 있는지 판단할 것임
 
     public List<GameObject> boxNoteList = new List<GameObject>();
-    public static int noteAns;
+    public static int noteAns=-3;
     [SerializeField] Transform Center = null; //판정 한 가운데
     [SerializeField] RectTransform[] timingRect = null; //여러 판정 범위
     Vector2[] timingBoxs = null;//rect transform 값 담기
@@ -41,12 +41,12 @@ public class TimingManager : MonoBehaviour
                     boxNoteList[i].GetComponent<Note>().HideNote();
                     noteAns=boxNoteList[i].GetComponent<Note>().ans;
                     boxNoteList.RemoveAt(i);
-                    Debug.Log("HIT" + x);
+                   // Debug.Log("HIT" + x);
                     return x;
                 }
             }
         }
-        Debug.Log("MISS");
+       // Debug.Log("MISS");
         return -1;
     }
 

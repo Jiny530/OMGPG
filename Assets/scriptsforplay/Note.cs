@@ -12,7 +12,7 @@ public class Note : MonoBehaviour
 
     private void Start()
     {
-        ans = tmpAns[NoteManager.noteCnt];
+        ans = tmpAns[NoteManager.noteCnt-1];
         noteImage = GetComponent<UnityEngine.UI.Image>();
     }
     public void HideNote()
