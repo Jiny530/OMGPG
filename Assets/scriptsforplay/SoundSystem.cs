@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class SoundSystem : MonoBehaviour
 {
-    public static AudioSource[] audios;
+    [SerializeField] AudioSource[] bgms = null;
+    [SerializeField] AudioSource[] pgMusics = null;
 
     void Start()
     {
-        audios = GameObject.Find("SoundSystem").GetComponents<AudioSource>();
-        //여기에 음악 경로로 다 써놓기 Find 하지 않기 위해.
+        bgms[Data.selected_song].Play();
+        pgMusics[Data.selected_song].Play();//이거 이렇게 틀어서 싱크가 맞을지는 모를 일..
     }
 }

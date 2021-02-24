@@ -1,41 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class NoteManager : MonoBehaviour
 {
+    public static bool finished;
+
     public static int noteCnt;
     float bpm =Data.bpms[Data.selected_song];
     int hit_term = Data.hit_terms[Data.selected_song];
-    bool playActive= true;
-    double delay;
 
-    public static double currentTime = Data.songDelay[Data.selected_song]+1.5d;
+
+    bool playActive= true;
+    double delay;//마지막에 팝업 뜨기 전에 딜레이 주려고 만든 변수
+
+  
+
+    public static double currentTime = Data.songDelays[Data.selected_song]+1.5d;
 
     [SerializeField] Transform tfNoteAppear = null; //노트가 생겨날 위치
     [SerializeField] GameObject goNote = null;
-    [SerializeField] GameObject Level_completed;
-    [SerializeField] GameObject Level_failed;
-    [SerializeField] GameObject PG;
-    [SerializeField] GameObject laser;
-    [SerializeField] GameObject gaktoe;
+    
 
     TimingManager theTimingManager;
 
     void Start()
     {
         theTimingManager = GetComponent<TimingManager>();
-        SoundSystem.audios[Data.selected_song].Play();
     }
 
     void Update()
     {
         currentTime += Time.deltaTime;
-        if (currentTime >= 5)
-        {
-            Level_completed.SetActive(true);
-        }
         if (noteCnt >= Data.answers[Data.selected_song].Length)
         {
             delay +=Time.deltaTime;
@@ -43,10 +41,7 @@ public class NoteManager : MonoBehaviour
             //팝업 엑티브
             if (delay>=4)
             {
-                Level_completed.SetActive(true);
-                PG.SetActive(false);
-                gaktoe.SetActive(false);
-                laser.SetActive(true);
+                finished = true;//이후 resultManager에서 결과화면 출력. 노래 끄는건 여기서 해야할지도?
             }
         }
         if (currentTime >= 60d*hit_term / bpm&&playActive)

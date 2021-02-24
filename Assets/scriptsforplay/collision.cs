@@ -16,6 +16,8 @@ public class collision : MonoBehaviour
     public float m_countToStop;
     public bool isTouching = false;
 
+    public static ContactPoint contact;//충돌 지점
+
     void Start()
     {
         snares = GetComponent<snare>();
@@ -54,7 +56,10 @@ public class collision : MonoBehaviour
             }
         }
 
+
+        ContactPoint contact = col.contacts[0];
         
+
     }
 
     void Vibrate(int ms)
