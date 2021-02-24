@@ -6,7 +6,7 @@ public class snare : MonoBehaviour
     // 전체적으로 노트매니저와 같이가도 좋을거같음.
 
     public GameObject[] snares;
-    double currentTime = Data.songDelay[Data.selected_song]+1.5d;
+    double currentTime = Data.songDelays[Data.selected_song]+1.5d;
     int hit_term = Data.hit_terms[Data.selected_song];
     public float bpm = Data.bpms[Data.selected_song];
     public bool start_sign = true;

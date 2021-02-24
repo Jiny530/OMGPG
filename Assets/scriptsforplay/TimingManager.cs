@@ -3,12 +3,10 @@ using UnityEngine;
 
 public class TimingManager : MonoBehaviour
 {
-    //생성된 노트들을 리스트에 담아서 잘 범위에 있는지 판단할 것임
-
-    public List<GameObject> boxNoteList = new List<GameObject>();
+    public List<GameObject> boxNoteList = new List<GameObject>();//생성된 노트들을 리스트에 담아서 잘 범위에 있는지 판단할 것임
     public static int noteAns=-3;
     [SerializeField] Transform Center = null; //판정 한 가운데
-    [SerializeField] RectTransform[] timingRect = null; //여러 판정 범위
+    [SerializeField] RectTransform[] timingRect = null; //판정 범위
     Vector2[] timingBoxs = null;//rect transform 값 담기
 
 
