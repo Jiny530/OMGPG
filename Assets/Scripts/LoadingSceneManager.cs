@@ -6,37 +6,57 @@ using UnityEngine.SceneManagement;
 
 public class LoadingSceneManager : MonoBehaviour
 {
+    public Text text_Loading;
     public Slider slider;
-    public string SceneName;
-
-    private float time;
+    private float time_loading = 5;
+    private float time_current;
+    private float time_start;
+    private bool isEnded = true;
 
     void Start()
     {
-        StartCoroutine(LoadAsynSceneCoroutine());
+        Reset_Loading();
     }
 
-    IEnumerator LoadAsynSceneCoroutine()
+    void Update()
     {
+        if (isEnded)
+            return;
+        Check_Loading();
+    }
 
-        AsyncOperation operation = SceneManager.LoadSceneAsync("play");
-
-        operation.allowSceneActivation = false;
-
-        while (!operation.isDone)
+    private void Check_Loading()
+    {
+        time_current = Time.time - time_start;
+        if (time_current < time_loading)
         {
-
-            time =+ Time.time;
-
-            slider.value = time/10f;
-
-            if (time > 10)
-            {
-                operation.allowSceneActivation = true;
-            }
-
-            yield return null;
+            Set_FillAmount(time_current / time_loading);
         }
+        else if (!isEnded)
+        {
+            End_Loading();
+        }
+    }
 
+    private void End_Loading()
+    {
+        Set_FillAmount(1);
+        isEnded = true;
+        SceneManager.LoadScene("play");
+    }
+
+    private void Reset_Loading()
+    {
+        time_current = time_loading;
+        time_start = Time.time;
+        Set_FillAmount(0);
+        isEnded = false;
+    }
+    private void Set_FillAmount(float _value)
+    {
+        slider.value = _value;
+        string txt = (_value.Equals(1) ? "Finished.. " : "Loading.. ") + (_value).ToString("P");
+        text_Loading.text = txt;
+        Debug.Log(txt);
     }
 }
