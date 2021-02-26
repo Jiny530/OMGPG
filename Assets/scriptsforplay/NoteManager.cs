@@ -16,9 +16,7 @@ public class NoteManager : MonoBehaviour
     bool playActive= true;
     double delay;//마지막에 팝업 뜨기 전에 딜레이 주려고 만든 변수
 
-  
-
-    public static double currentTime = Data.songDelays[Data.selected_song]+1.5d;
+    public static double currentTime = Data.songDelays[Data.selected_song]+1.5d+ Data.usersyncDelay;
 
     [SerializeField] Transform tfNoteAppear = null; //노트가 생겨날 위치
     [SerializeField] GameObject goNote = null;

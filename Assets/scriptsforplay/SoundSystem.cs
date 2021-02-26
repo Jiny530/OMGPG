@@ -9,7 +9,7 @@ public class SoundSystem : MonoBehaviour
 
     void Start()
     {
-        bgms[Data.selected_song].Play();
-        pgMusics[Data.selected_song].Play();//이거 이렇게 틀어서 싱크가 맞을지는 모를 일..
+        pgMusics[Data.selected_song].Play(0);//이거 이렇게 틀어서 싱크가 맞을지는 모를 일..
+        bgms[Data.selected_song].Play(0);
     }
 }
