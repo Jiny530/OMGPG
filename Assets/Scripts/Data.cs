@@ -17,10 +17,10 @@ public class Data : MonoBehaviour
     public static int[] best_scores = { 0, 0, 0 };
     public static int[] max_scores = { 0, 150, 270 };
 
-    public static bool[] acquired_stone= { false, false, false, false, false };
-    public static bool[] acquired_frame = { false, false, false, false, false };
-    public static bool[] acquired_stick = { false,false,false};
-    public static bool[] acquired_info = { false,false,false};
+    public static bool[] acquired_stone= { true, false, false, false, false, false };
+    public static bool[] acquired_frame = { true, false, false, false, false, false };
+    public static bool[] acquired_stick = { true, false, false, false, false, false };
+    public static bool[] acquired_info = { false, false, false, false, false };
 
     public static int[] reward_index = { 0,0,0,0};//인덱스 순서는 곡 순서와 동일
     public static int[] reward_type = {-1,3,1,2};//0 frame, 1 stone, 2 stick, 3 info
