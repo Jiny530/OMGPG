@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class CenterFrame : MonoBehaviour
 {
-    // Start is called before the first frame update
     double nowTime = 0;
     double enterT;
     public static double center;
     bool musicStart;
-    AudioSource myAudio;
-    private void Start()
-    {
-        myAudio = GetComponent<AudioSource>();
-    }
+    [SerializeField] AudioSource myAudio;
+
     private void Update()
     {
         nowTime += Time.deltaTime;
@@ -35,8 +31,6 @@ public class CenterFrame : MonoBehaviour
     {
         if (collision.CompareTag("Note"))
         {
-            //Debug.Log("EXIT " + nowTime);
-            //Debug.Log(nowTime - enterT);
             center = (nowTime + enterT)/2;
         }
     }
