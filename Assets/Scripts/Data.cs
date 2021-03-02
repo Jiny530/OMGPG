@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class Data : MonoBehaviour
 {
-    string[] song_list = {"Free", "상사화", "Hedwig's Theme" };
+    public static string[] song_list = {"Free", "상사화", "Hedwig's Theme" };
     public static int[] bpms = { 105, 107, 158, 0 };
     public static double[] songDelays = { 0, -13.3, -2.5 };
     public static int[] hit_terms = { 4, 3, 3 };
@@ -25,7 +25,7 @@ public class Data : MonoBehaviour
     public static int[] reward_index = { 0,0,0,0};//인덱스 순서는 곡 순서와 동일
     public static int[] reward_type = {-1,3,1,2};//0 frame, 1 stone, 2 stick, 3 info
 
-    public static int selected_song=1, user_lev, user_ex, dic_lev, volume;
+    public static int selected_song=-1, user_lev, user_ex, dic_lev, volume;
     public static double usersyncDelay;
     public static int stone = -1;
     public static int frame = -1;

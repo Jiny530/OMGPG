@@ -6,19 +6,20 @@ public class snare : MonoBehaviour
     // 전체적으로 노트매니저와 같이가도 좋을거같음.
 
     public GameObject[] snares;
-    double currentTime = Data.songDelays[Data.selected_song]+1.5d;
+    double currentTime = Data.songDelays[Data.selected_song] + 1.5d + Data.usersyncDelay +0.2d;
     int hit_term = Data.hit_terms[Data.selected_song];
-    public float bpm = Data.bpms[Data.selected_song];
+    float bpm = Data.bpms[Data.selected_song];
     public bool start_sign = true;
     int num = 0; //현재 정답 순서
 
     public void Update()
     {
         currentTime += Time.deltaTime;
-        if (currentTime >= 0 && start_sign)
+        if (currentTime >= 60d * hit_term / bpm && start_sign)
         {
             snares[Data.answers[Data.selected_song][num]].SetActive(true);  
             num++;
+            currentTime -= 60d * hit_term / bpm;
             start_sign = false;
         }
         if (currentTime >= 60d*hit_term / bpm && num < Data.answers[Data.selected_song].Length)
