@@ -13,7 +13,10 @@ public class play_song : MonoBehaviour
     public Text score;
     public Image image;
 
-
+    void Start()
+    {
+        Data.selected_song = -1;
+    }
 
     // -1로 시작한다고 가정
     public void playSong(int i)
@@ -29,6 +32,7 @@ public class play_song : MonoBehaviour
                 Data.selected_song = i;
 
                 //패널을 새로 바뀐 노래 정보로 업데이트
+                panel.SetActive(true);
                 panel_info(i);
             }
             else //같은노래이면
