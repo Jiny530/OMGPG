@@ -12,7 +12,6 @@ public class NoteManager : MonoBehaviour
     float bpm =Data.bpms[Data.selected_song];
     int hit_term = Data.hit_terms[Data.selected_song];
 
-
     bool playActive= true;
     double delay;//마지막에 팝업 뜨기 전에 딜레이 주려고 만든 변수
 
@@ -20,8 +19,6 @@ public class NoteManager : MonoBehaviour
 
     [SerializeField] Transform tfNoteAppear = null; //노트가 생겨날 위치
     [SerializeField] GameObject goNote = null;
-    
-
     TimingManager theTimingManager;
 
     void Start()

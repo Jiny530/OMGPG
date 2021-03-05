@@ -10,8 +10,7 @@ public class collision : MonoBehaviour
 {
     public AudioSource[] pg_sound;
     public string[] tags;
-    //public static int hitCheck=-1;
-    public static int hitCheck=12;//디버깅용으로 바꿔놓은것입니다.
+    public static int hitCheck=-1;
     snare snares;
     public float m_countToStop;
 

@@ -179,7 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f567c0d13c2bb4f4fa1d90817265573b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpm: 107
   tfNoteAppear: {fileID: 486975030}
   goNote: {fileID: 9084493388823596029, guid: db941a13c64df6843b358fa5326a48cb, type: 3}
 --- !u!61 &33976329
@@ -1827,7 +1826,6 @@ MonoBehaviour:
   - {fileID: 1741362081}
   - {fileID: 718918436}
   - {fileID: 390714592}
-  bpm: 107
   start_sign: 1
 --- !u!114 &414495509
 MonoBehaviour:
@@ -1884,6 +1882,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d792472b26207d4485a50cccd573f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  judgePrefab: []
+  judgePos: []
   timeVal: 0
 --- !u!4 &414495511
 Transform:
@@ -3094,7 +3094,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828387036}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf162022e230bb745ab2ec48cd357f9e, type: 3}
   m_Name: 
@@ -3459,7 +3459,6 @@ MonoBehaviour:
   - pg14
   - pg15
   m_countToStop: 0
-  isTouching: 0
 --- !u!95 &880780274
 Animator:
   serializedVersion: 3
@@ -7131,6 +7130,10 @@ PrefabInstance:
     - target: {fileID: 11400010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: GravityModifier
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493974, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 14300000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_Height
