@@ -25,7 +25,7 @@ public class Data : MonoBehaviour
     public static int[] reward_index = { 0,0,0,0};//인덱스 순서는 곡 순서와 동일
     public static int[] reward_type = {-1,3,1,2};//0 frame, 1 stone, 2 stick, 3 info
 
-    public static int selected_song=0, user_lev, user_ex, dic_lev, volume;
+    public static int selected_song=1, user_lev, user_ex, dic_lev, volume;
     public static double usersyncDelay;
     public static int stone = -1;
     public static int frame = -1;
