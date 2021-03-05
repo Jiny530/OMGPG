@@ -14,7 +14,6 @@ public class collision : MonoBehaviour
     public static int hitCheck=12;//디버깅용으로 바꿔놓은것입니다.
     snare snares;
     public float m_countToStop;
-    public bool isTouching;
 
     void Start()
     {
@@ -40,9 +39,8 @@ public class collision : MonoBehaviour
 
         for (int i = 0; i < 16; i++)
         {
-            if (col.collider.CompareTag(tags[i]) && !isTouching)
+            if (col.collider.CompareTag(tags[i]))
             {
-                isTouching = true;
                 pg_sound[i].PlayOneShot(pg_sound[i].clip);
                 hitCheck = i;
                 if (snares.snares[i].activeSelf)
@@ -66,8 +64,4 @@ public class collision : MonoBehaviour
         m_countToStop = 0;
     }
 
-    public void OnCollisionExit(Collision col)
-    {
-        isTouching = false;
-    }
 }
