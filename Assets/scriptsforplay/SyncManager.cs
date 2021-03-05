@@ -9,6 +9,9 @@ public class SyncManager : MonoBehaviour
     double timer;
     double sum;
     double delay;
+    [SerializeField] AudioSource beat = null;
+    [SerializeField] GameObject setpop=null;
+    [SerializeField] GameObject failpop=null;
 
     private void Start()
     {
@@ -34,11 +37,13 @@ public class SyncManager : MonoBehaviour
                 if (timeMid > 3)
                 {
                     Data.usersyncDelay = timeMid;
-                    //set Active FailPop;
+                    beat.Stop();
+                    setpop.SetActive(true);
                 }
                 else
                 {
-                    //set Active SetPop;
+                    beat.Stop();
+                    failpop.SetActive(true);
                 }
             }
         }

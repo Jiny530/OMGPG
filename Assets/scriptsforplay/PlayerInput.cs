@@ -16,7 +16,7 @@ public class PlayerInput : MonoBehaviour
     private void Start()
     {
         theTimingManager = FindObjectOfType<TimingManager>();
-        set_effect_positions();
+
     }
 
     void Update()
@@ -46,30 +46,14 @@ public class PlayerInput : MonoBehaviour
 
     void feedbackAnim()
     {
-        judgePrefab[timeVal].SetActive(false);//숨겼다가
+        judgePrefab[0].SetActive(false);//숨겼다가
+        judgePrefab[1].SetActive(false);//숨겼다가
+        judgePrefab[2].SetActive(false);//숨겼다가
+        judgePrefab[3].SetActive(false);//숨겼다가
         judgePrefab[timeVal].transform.position = effect_positions[TimingManager.noteAns];//옮기고
         judgePrefab[timeVal].SetActive(true);//나타나기.
     }
 
-    void set_effect_positions()//판정 feedback을 띄울 위치 배열.
-    {
-        effect_positions[0] = new Vector3(-1.131f, 0.154f, 0f) ;
-        effect_positions[1] = new Vector3(-0.827f, 0.154f, 0f);
-        effect_positions[2] = new Vector3(-0.463f, 0.154f, 0f);
-        effect_positions[3] = new Vector3(-0.16f, 0.154f, 0f);
-        effect_positions[4] = new Vector3(0.148f, 0.154f, 0f);
-        effect_positions[5] = new Vector3(0.433f, 0.154f, 0f);
-        effect_positions[6] = new Vector3(0.827f, 0.154f, 0f);
-        effect_positions[7] = new Vector3(1.132f, 0.154f, 0f);
-
-        effect_positions[8] = new Vector3(1.131f, -0.541f, 0f);
-        effect_positions[9] = new Vector3(-0.827f, -0.541f, 0f);
-        effect_positions[10] = new Vector3(-0.463f, -0.541f, 0f);
-        effect_positions[11] = new Vector3(-0.16f, -0.541f, 0f);
-        effect_positions[12] = new Vector3(-0.148f, -0.541f, 0f);
-        effect_positions[13] = new Vector3(0.433f, -0.541f, 0f);
-        effect_positions[14] = new Vector3(0.807f, -0.541f, 0f);
-        effect_positions[15] = new Vector3(-1.132f, -0.541f, 0f); 
-    }
+   
 
 }
