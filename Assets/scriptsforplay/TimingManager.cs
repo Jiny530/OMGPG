@@ -30,14 +30,11 @@ public class TimingManager : MonoBehaviour
                 if(timingBoxs[x].x<=t_notePosX && t_notePosX<=timingBoxs[i].y)//범위에 들어왔누ㅡㄴ지..
                 {
                     boxNoteList[i].GetComponent<Note>().HideNote();
-                    noteAns=boxNoteList[i].GetComponent<Note>().ans;
                     boxNoteList.RemoveAt(i);
-                   // Debug.Log("HIT" + x);
                     return x;
                 }
             }
         }
-       // Debug.Log("MISS");
-        return -1;
+        return 4;//miss
     }
 }
