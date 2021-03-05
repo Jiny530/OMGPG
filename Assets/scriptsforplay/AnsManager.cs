@@ -8,10 +8,12 @@ public class AnsManager : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D col)
     { 
-        TimingManager.noteAns=col.GetComponent<Note>().ans;
+        //TimingManager.noteAns=col.GetComponent<Note>().ans;
+        CurrentAns= col.GetComponent<Note>().ans;
     }
     private void OnTriggerExit2D(Collider2D col)
     {
-        TimingManager.noteAns=16;
+        //TimingManager.noteAns=16;
+        CurrentAns = 16;
     }
 }
