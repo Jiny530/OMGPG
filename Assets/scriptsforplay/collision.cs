@@ -13,6 +13,7 @@ public class collision : MonoBehaviour
     public static int hitCheck=-1;
     snare snares;
     public float m_countToStop;
+    public double hit_duration=1f;//따닥 방지변수
 
     void Start()
     {
@@ -29,10 +30,13 @@ public class collision : MonoBehaviour
                 StopVibration();
             }
         }
+        hit_duration += Time.deltaTime;
     }
 
     public void OnCollisionEnter(Collision col)
     {
+        if (hit_duration < 0.5)//따닥 방지.
+            return;
         Vibrate(50);
         //OVRInput.SetControllerVibration(0.3f, 0.3f, OVRInput.Controller.RTouch);
 
@@ -49,6 +53,7 @@ public class collision : MonoBehaviour
                 break;
             }
         }
+        hit_duration = 0f;//0.5초간 다시 충돌 함수가 호출되지 않도록 구현,, 너무 길다 싶으면 줄일 수도 있구여@ 한 프레임은 0.2초 정도 하는 것 같음.
     }
 
     void Vibrate(int ms)
