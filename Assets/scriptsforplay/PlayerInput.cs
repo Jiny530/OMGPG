@@ -8,6 +8,7 @@ public class PlayerInput : MonoBehaviour
     public static Vector3[] effect_positions;
     [SerializeField] GameObject[] judgePrefab = null;//판정 이미지
     [SerializeField] GameObject[] judgePos=null;
+    public ParticleSystem[] particles; // 파티클
 
     void set_effect_positions()
     {
@@ -87,5 +88,10 @@ public class PlayerInput : MonoBehaviour
         }
         */
         judgePrefab[timeVal].SetActive(true);//나타나기.
+
+
+
+        //파티클 실행
+        particles[collision.hitCheck].Play();
     }
 }
