@@ -12,12 +12,25 @@ public class change_shape : MonoBehaviour
 
     void Start()
     {
-        meshFilter = GetComponent<MeshFilter>();
-        meshFilter.sharedMesh = meshs[Data.stick];
+        
+        if (Data.stick < 0)
+        {
+            //원본 유지
+        }
+        else //옷갈아입히기
+        {
 
-        mat = gaktoe.GetComponent<MeshRenderer>().materials;
-        mat[0] = material[Data.stick];
-        gaktoe.GetComponent<MeshRenderer>().materials = mat;
+            this.transform.localScale = new Vector3(5f, 5f, 5f);
+            this.transform.localEulerAngles = new Vector3(0, 10, 90);
+
+            meshFilter = GetComponent<MeshFilter>();
+            meshFilter.sharedMesh = meshs[Data.stick];
+
+            mat = gaktoe.GetComponent<MeshRenderer>().materials;
+            mat[0] = material[Data.stick];
+            gaktoe.GetComponent<MeshRenderer>().materials = mat;
+
+        }
     }
 
     // Update is called once per frame

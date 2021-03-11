@@ -6332,6 +6332,7 @@ GameObject:
   - component: {fileID: 961058942}
   - component: {fileID: 961058943}
   - component: {fileID: 961058944}
+  - component: {fileID: 961058945}
   m_Layer: 0
   m_Name: gaktyeo
   m_TagString: Untagged
@@ -6529,6 +6530,29 @@ MonoBehaviour:
   m_snapOrientation: 1
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!114 &961058945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961058935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe248820154c6646a398b5d88b28ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gaktoe: {fileID: 961058935}
+  meshs:
+  - {fileID: -2200911647707196941, guid: e509fcf4c468a7546828dbc588cef288, type: 3}
+  - {fileID: -3872096494107927711, guid: 9ec6e5098bfc4114ebfb6703b2b3550a, type: 3}
+  - {fileID: -4586238703335129554, guid: bc51a38d328353a458ca931928cf8be8, type: 3}
+  - {fileID: 8518488643754037461, guid: 6ecc69a44994aea469ae918702d4242d, type: 3}
+  material:
+  - {fileID: 2100000, guid: f2e7f0139647cee4c9ea0412a8775387, type: 2}
+  - {fileID: 2100000, guid: 4a040ea9bdccd9e4d969ed49b0f7bd24, type: 2}
+  - {fileID: 2100000, guid: d71bf47b91569b94dbdf3950e5bdb2dd, type: 2}
+  - {fileID: 2100000, guid: ccbf374e2dbf5124ea3a4675d9729a76, type: 2}
 --- !u!1 &964343690
 GameObject:
   m_ObjectHideFlags: 0
