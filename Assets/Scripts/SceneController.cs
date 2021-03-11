@@ -83,7 +83,6 @@ public class SceneController : MonoBehaviour
     public void go_Loading()
     {
         //dataSave();
-        Debug.Log("헤이!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         SceneManager.LoadScene("Loading");
     }
 
