@@ -89,11 +89,9 @@ public class PlayerInput : MonoBehaviour
             judgePrefab[timeVal].transform.localRotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
         }
         */
-        judgePrefab[timeVal].SetActive(true);//나타나기.
-
-
-
+        judgePrefab[timeVal].SetActive(true);//나타나
         //파티클 실행
         particles[collision.hitCheck].Play();
+
     }
 }
