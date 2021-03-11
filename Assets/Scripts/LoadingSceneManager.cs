@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadingSceneManager : MonoBehaviour
 {
+
     public Text text_Loading;
     public Slider slider;
     private float time_loading = 5;

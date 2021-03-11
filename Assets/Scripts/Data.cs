@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Data : MonoBehaviour
 {
     public static string[] song_list = {"Free", "상사화", "Hedwig's Theme" };
-    public static int[] bpms = { 105, 107, 158, 0 };
+    public static int[] bpms = { 105, 108, 158, 0 };
     public static double[] songDelays = { 0, -13.3, -2.5 };
     public static int[] hit_terms = { 4, 3, 3 };
     public static int[][] answers = new[]
