@@ -10,6 +10,8 @@ public class change_shape : MonoBehaviour
     public Material[] material;
     Material[] mat;
 
+    public GameObject[] colliders;
+
     void Start()
     {
         
@@ -19,9 +21,20 @@ public class change_shape : MonoBehaviour
         }
         else //옷갈아입히기
         {
+            colliders[Data.stick].SetActive(true);
+            Collider col = gaktoe.GetComponent<Collider>();
+            col.enabled = false;
 
-            this.transform.localScale = new Vector3(5f, 5f, 5f);
-            this.transform.localEulerAngles = new Vector3(0, 10, 90);
+            this.transform.localPosition = new Vector3(0.1f, 0f, 0f);
+            this.transform.localEulerAngles = new Vector3(90, 10, 90);
+            if (Data.stick == 2) //아이스크림이면 좀더 얇게 바꿈
+            {
+                this.transform.localScale = new Vector3(5f, 7f, 5f);
+            }
+            else
+            {
+                this.transform.localScale = new Vector3(7f, 7f, 7f);
+            }
 
             meshFilter = GetComponent<MeshFilter>();
             meshFilter.sharedMesh = meshs[Data.stick];
