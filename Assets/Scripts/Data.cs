@@ -29,5 +29,5 @@ public class Data : MonoBehaviour
     public static double usersyncDelay;
     public static int stone = -1;
     public static int frame = -1;
-    public static int stick = 1;
+    public static int stick = 0;
 }
