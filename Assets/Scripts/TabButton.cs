@@ -1,18 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TabButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public UnityEvent onTabSelected;
+    public UnityEvent onTabDeselected;
+
+    public void Select() {
+        if (onTabSelected != null) {
+            onTabSelected.Invoke();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void Deselect() {
+        if (onTabDeselected != null) {
+            onTabDeselected.Invoke();
+        }
+    }
+
+    public void OnSelectTab(TabButton button) {
+        TabController.Instance.SelectedButton(button);
     }
 }
