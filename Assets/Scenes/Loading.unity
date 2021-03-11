@@ -1108,6 +1108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942f25ecca038ad45afaf0ae2d44b8b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scenename:
+    m_Handle: 0
   text_Loading: {fileID: 2088637138}
   slider: {fileID: 213961404}
 --- !u!4 &955508618

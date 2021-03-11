@@ -42,6 +42,8 @@ public class PlayerInput : MonoBehaviour
     {
         theTimingManager = FindObjectOfType<TimingManager>();
         set_effect_positions();
+        Debug.Log("delay "+Data.songDelays[Data.selected_song]);
+        Debug.Log("selected song "+Data.selected_song);
     }
 
     void Update()

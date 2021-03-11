@@ -1,14 +1,18 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/3Dobject/sakgo_frame.obj.meta
 guid: 717947f3e1c9430429611c490e70b31d
+=======
+guid: 273ceee4bb0da134489142deab44c403
+>>>>>>> 0904b71 (INTRO & FEEDBACK 100%):Assets/3Dobject/sticks/candy.fbx.meta
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
   externalObjects: {}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
