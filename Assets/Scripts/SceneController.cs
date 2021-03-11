@@ -9,16 +9,6 @@ public class SceneController : MonoBehaviour
     float sink;
     int[] top_score;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     void select()
     {
@@ -93,6 +83,7 @@ public class SceneController : MonoBehaviour
     public void go_Loading()
     {
         //dataSave();
+        Debug.Log("헤이!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         SceneManager.LoadScene("Loading");
     }
 

@@ -1267,7 +1267,9 @@ MonoBehaviour:
   - pg13
   - pg14
   - pg15
+  snare_obj: {fileID: 0}
   m_countToStop: 0
+  hit_duration: 1
 --- !u!95 &354095450
 Animator:
   serializedVersion: 3
@@ -4262,17 +4264,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d54e84808998e4f4f80c1df9c90bdcf2,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.0014999999
+      value: 0.002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d54e84808998e4f4f80c1df9c90bdcf2,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0015000002
+      value: 0.002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d54e84808998e4f4f80c1df9c90bdcf2,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.0015000002
+      value: 0.002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d54e84808998e4f4f80c1df9c90bdcf2,
         type: 3}
@@ -4282,7 +4284,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d54e84808998e4f4f80c1df9c90bdcf2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.08
+      value: 4.13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d54e84808998e4f4f80c1df9c90bdcf2,
         type: 3}
