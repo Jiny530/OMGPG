@@ -27,7 +27,7 @@ public class Data : MonoBehaviour
 
     public static int selected_song=1, user_lev, user_ex, dic_lev, volume;
     public static double usersyncDelay;
-    public static int stone = -1;
-    public static int frame = -1;
-    public static int stick = -1;
+    public static int stone = 0;
+    public static int frame = 0;
+    public static int stick = 0;
 }

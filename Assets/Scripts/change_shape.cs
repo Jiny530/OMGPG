@@ -15,7 +15,7 @@ public class change_shape : MonoBehaviour
     void Start()
     {
         
-        if (Data.stick < 0)
+        if (Data.stick == 0)
         {
             //원본 유지
         }

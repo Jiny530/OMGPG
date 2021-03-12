@@ -17,7 +17,7 @@ public class change_cloth : MonoBehaviour
 
     void Start()
     {   
-        if (Data.stone < 0)
+        if (Data.stone == 0)
         {
             //원본 유지
         }
@@ -30,7 +30,7 @@ public class change_cloth : MonoBehaviour
             }
         }
 
-        if (Data.frame < 0)
+        if (Data.frame == 0)
         {
             //원본 유지
         }

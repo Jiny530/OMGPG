@@ -6638,14 +6638,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gaktoe: {fileID: 961058935}
   meshs:
+  - {fileID: 0}
   - {fileID: -2200911647707196941, guid: e509fcf4c468a7546828dbc588cef288, type: 3}
   - {fileID: -3872096494107927711, guid: 9ec6e5098bfc4114ebfb6703b2b3550a, type: 3}
   - {fileID: 8518488643754037461, guid: 6ecc69a44994aea469ae918702d4242d, type: 3}
   material:
+  - {fileID: 0}
   - {fileID: 2100000, guid: f2e7f0139647cee4c9ea0412a8775387, type: 2}
   - {fileID: 2100000, guid: 4a040ea9bdccd9e4d969ed49b0f7bd24, type: 2}
   - {fileID: 2100000, guid: ccbf374e2dbf5124ea3a4675d9729a76, type: 2}
   colliders:
+  - {fileID: 0}
   - {fileID: 437697993}
   - {fileID: 154550542}
   - {fileID: 1758411489}
