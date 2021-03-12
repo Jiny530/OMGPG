@@ -27,7 +27,7 @@ public class change_shape : MonoBehaviour
 
             this.transform.localPosition = new Vector3(0.1f, 0f, 0f);
             this.transform.localEulerAngles = new Vector3(90, 10, 90);
-            if (Data.stick == 2) //아이스크림이면 좀더 얇게 바꿈
+            if (Data.stick == 3) //아이스크림이면 좀더 얇게 바꿈
             {
                 this.transform.localScale = new Vector3(5f, 7f, 5f);
             }
