@@ -10,6 +10,7 @@ public class ResultManager : MonoBehaviour
     [SerializeField] GameObject PG;
     [SerializeField] GameObject laser;
     [SerializeField] GameObject gaktoe;
+    [SerializeField] Transform leaserPos;
 
     public Text finalScore;
     public Text bestScore;
@@ -18,6 +19,7 @@ public class ResultManager : MonoBehaviour
     public Toggle left;
     public Toggle center;
     public Toggle right;
+    public Vector3 tmp;
 
     // Update is called once per frame
     void Update()
@@ -28,7 +30,9 @@ public class ResultManager : MonoBehaviour
             Level_completed.SetActive(true);
             PG.SetActive(false);
             gaktoe.SetActive(false);
+            laser.transform.localPosition=leaserPos.localPosition;
             laser.SetActive(true);
+
         }
         
     }
