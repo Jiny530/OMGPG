@@ -46,31 +46,38 @@ public class selected_thema : MonoBehaviour
                 frames[Data.frame].SetActive(true);
                 break;
 
-            defalt: //돌페이지
+
+            default: //돌페이지
+
                 for (int i = 0; i < 6; i++)
                 {
                     stones[i].SetActive(false);
                 }
                 stones[Data.stone].SetActive(true);
+
+                break;
         }
     }
     public void stick_select(int index){
-        
+        sticks[Data.stick].SetActive(false);
+
         Data.stick = index;
         sticks[index].SetActive(true);
     }
     
     public void frame_select(int index){
-
+        frames[Data.frame].SetActive(false);
         Data.frame = index;
         frames[index].SetActive(true);
     }
 
+
     public void stone_select(int index)
     {
+        stones[Data.stone].SetActive(false);
+
         Data.stone = index;
         stones[index].SetActive(true);
     }
     
 }
-
