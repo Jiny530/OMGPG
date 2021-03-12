@@ -42,7 +42,12 @@ public class LoadingSceneManager : MonoBehaviour
     {
         Set_FillAmount(1);
         isEnded = true;
-        SceneManager.LoadScene("play");
+        if(Data.selected_song == 0){
+            SceneManager.LoadScene("freeplay");
+        }
+        else{
+            SceneManager.LoadScene("play");
+        }
     }
 
     private void Reset_Loading()

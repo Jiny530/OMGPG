@@ -18,12 +18,6 @@ public class SoundEffect : MonoBehaviour
         DontDestroyOnLoad(transform.gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void PlaySE() {
         theAudio.Play();
     }
