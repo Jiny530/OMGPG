@@ -5,6 +5,9 @@ using UnityEngine;
 public class selected_thema : MonoBehaviour
 {
     public GameObject[] content;
+    [SerializeField] GameObject[] stones = null;
+    [SerializeField] GameObject[] frames = null;
+    [SerializeField] GameObject[] sticks = null;
 
     //해당 이미지를 클릭하면 나머지는 비활성화, 선택된것만 활성화, 변수에 해당 인덱스 저장
     //선택된 이미지를 한번 더 클릭시 비활성화, 변수에 -1 저장
