@@ -10,11 +10,11 @@ public class SceneController : MonoBehaviour
     int[] top_score;
 
 
-    void select()
+ /*   void select()
     {
         //selected = getComponent
-    }
-
+    }*/
+/*
     public void dataSave()
     {
         //데이터 저장
@@ -33,7 +33,7 @@ public class SceneController : MonoBehaviour
         PlayerPrefs.SetInt("top_score_song_number2", top_score[2]);
 
         PlayerPrefs.Save();
-    }
+    }*/
 
     public void go_Main()
     {
@@ -68,11 +68,11 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Play");
     }
 
-    public void re_Play()
+   /*public void re_Play()
     {
         //dataSave();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+    }*/
 
     public void go_Sync()
     {

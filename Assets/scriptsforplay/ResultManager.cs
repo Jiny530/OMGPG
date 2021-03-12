@@ -32,7 +32,6 @@ public class ResultManager : MonoBehaviour
             gaktoe.SetActive(false);
             laser.transform.localPosition=leaserPos.localPosition;
             laser.SetActive(true);
-
         }
         
     }
@@ -46,10 +45,10 @@ public class ResultManager : MonoBehaviour
         }
         bestScore.text = Data.best_scores[Data.selected_song].ToString();
         if(PlayerInput.playScore>0.6*Data.max_scores[Data.selected_song] && Data.best_scores[Data.selected_song]<0.6*Data.max_scores[Data.selected_song])//&&아직 획득되지 않은 아이템이면 이라는 조건 필요.
-        {//가능한지 잘 모르겠음 일단은 해놓은 것이에요ㅠ
+        {
             newReward.enabled = true;
-            image.enabled = true;
-            switch (Data.reward_type[Data.selected_song])//리워드 부여하기
+           // image.enabled = true;
+            switch (Data.reward_type[Data.selected_song])
             {
                 case 0://frame
                     Data.acquired_frame[Data.reward_index[Data.selected_song]] = true;
