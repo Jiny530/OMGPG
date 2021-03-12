@@ -4,20 +4,13 @@ using UnityEngine;
 
 public class selected_thema : MonoBehaviour
 {
-    public GameObject[] content;
-    [SerializeField] GameObject[] stones = null;
-    [SerializeField] GameObject[] frames = null;
-    [SerializeField] GameObject[] sticks = null;
+    public GameObject[] sticks;
+    public GameObject[] frames;
+    public GameObject[] stones;
 
     //해당 이미지를 클릭하면 나머지는 비활성화, 선택된것만 활성화, 변수에 해당 인덱스 저장
     //선택된 이미지를 한번 더 클릭시 비활성화, 변수에 -1 저장
-
-    void start(){
-        if (Data.stone != -1 ){
-            content[Data.stone].SetActive(true); 
-            print(Data.stone);
-        }
-    }
+    /*
     public void select(int index){
 
         
@@ -32,35 +25,52 @@ public class selected_thema : MonoBehaviour
             Data.stone = index;
             Data.frame = index;
         }            
-    }
-/*
-    public void stone_select(int index){
+    }*/
+    public void panel_select(int index)
+    {
+        switch (index)
+        {
+            case 0: //스틱페이지
+                for (int i = 0; i < 4; i++)
+                {
+                    sticks[i].SetActive(false);  
+                }
+                sticks[Data.stick].SetActive(true);
+                break;
 
-        for (int i = 0; i < 5; i++){
-            content[i].SetActive(false);  
-        }
-        if (Data.stone == index){
-            Data.stone = -1;
-        }
-        else{
-            content[index].SetActive(true); 
-            Data.stone = index;
-        }            
-    }
+            case 1: //프레임페이지
+                for (int i = 0; i < 6; i++)
+                {
+                    frames[i].SetActive(false);
+                }
+                frames[Data.frame].SetActive(true);
+                break;
 
+            defalt: //돌페이지
+                for (int i = 0; i < 6; i++)
+                {
+                    stones[i].SetActive(false);
+                }
+                stones[Data.stone].SetActive(true);
+        }
+    }
+    public void stick_select(int index){
+        
+        Data.stick = index;
+        sticks[index].SetActive(true);
+    }
+    
     public void frame_select(int index){
 
-        for (int i = 0; i < 5; i++){
-            content[i].SetActive(false);  
-        }
-        if (Data.stone == index){
-            Data.stone = -1;
-        }
-        else{
-            content[index].SetActive(true); 
-            Data.frame = index;
-        }            
+        Data.frame = index;
+        frames[index].SetActive(true);
     }
-    */
+
+    public void stone_select(int index)
+    {
+        Data.stone = index;
+        stones[index].SetActive(true);
+    }
+    
 }
 
