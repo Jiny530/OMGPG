@@ -14,7 +14,7 @@ public class change_shape : MonoBehaviour
 
     void Start()
     {
-        
+
         if (Data.stick == 0)
         {
             //원본 유지
@@ -46,9 +46,4 @@ public class change_shape : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
