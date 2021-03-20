@@ -12,8 +12,11 @@ public class snare : MonoBehaviour
     public bool start_sign = true;
     int num = 0; //현재 정답 순서
 
+    //public Animator animator;
+
     public void Update()
     {
+
         currentTime += Time.deltaTime;
         if (currentTime >= 60d * hit_term / bpm && start_sign)
         {
@@ -31,17 +34,5 @@ public class snare : MonoBehaviour
             num++;
         }
     }
-
-    /*안쓰게 됐는데 혹시몰라서 남겨둠
-    void snare_effect(string ans){ 
-        // 태그에 맞는 편경의 자식프레임 활성화
-        for (int i=0;i<16;i++){
-            if (snares[i].transform.parent.gameObject.CompareTag(ans)){
-                snares[i].SetActive(true); 
-                // 활성화 되자마자 애니메이션 시작, 애니메이션 시작되고 끝까지 종료되면 false
-                break;
-            }
-        }
-    }*/
 
 }
