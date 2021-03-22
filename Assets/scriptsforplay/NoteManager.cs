@@ -26,20 +26,18 @@ public class NoteManager : MonoBehaviour
     [SerializeField] GameObject goNote = null;
     TimingManager theTimingManager;
 
-    double loadDelay=0f;
+    public static double loadDelay=1.5f;
 
     void Start()
     {
         theTimingManager = GetComponent<TimingManager>();
-        while(loadDelay<.15f){
-            loadDelay+=Time.deltaTime;
-        }
+
     }
 
     void Update()
     {
-        if(loadDelay<1.5f){
-            loadDelay+=Time.deltaTime;
+        if(loadDelay>0f){
+            loadDelay-=Time.deltaTime;
             return;
         }//타이머 최초 시작 이전에는 1.5초간 그냥 리턴해버리는 기능
         currentTimeNote += Time.deltaTime;

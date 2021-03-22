@@ -11,14 +11,15 @@ public class collision : MonoBehaviour
     public AudioSource[] pg_sound;
     public string[] tags;
     public static int hitCheck=-1;
-    NoteManager snare_compo;
-    public GameObject snare_obj;
+    //snare snare_compo;
+    //public GameObject snare_obj;
+    [SerializeField] public GameObject[] snares;
     public float m_countToStop;
     public double hit_duration=1f;//따닥 방지변수
 
     void Start()
     {
-        snare_compo = snare_obj.GetComponent<NoteManager>();
+       // snare_compo = snare_obj.GetComponent<snare>();
     }
 
     void Update()
@@ -47,9 +48,9 @@ public class collision : MonoBehaviour
             {
                 pg_sound[i].PlayOneShot(pg_sound[i].clip);
                 hitCheck = i;
-                if (snare_compo.snares[i].activeSelf)
+                if (snares[i].activeSelf)
                 { //collision으로는 자식객체 접근 불가능해서 그냥 snare로 접근
-                    snare_compo.snares[i].SetActive(false);
+                    snares[i].SetActive(false);
                 }
                 break;
             }

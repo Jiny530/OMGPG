@@ -1558,25 +1558,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d25544b5e082a4a95e263658066633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snares:
-  - {fileID: 1979692464}
-  - {fileID: 102044519}
-  - {fileID: 1342584528}
-  - {fileID: 2097672665}
-  - {fileID: 2028656380}
-  - {fileID: 1341987041}
-  - {fileID: 1690849807}
-  - {fileID: 98903269}
-  - {fileID: 281356132}
-  - {fileID: 640978847}
-  - {fileID: 301539012}
-  - {fileID: 337274770}
-  - {fileID: 174817326}
-  - {fileID: 258900854}
-  - {fileID: 1980106310}
-  - {fileID: 1832565517}
-  - {fileID: 250757211}
-  start_sign: 1
 --- !u!114 &200146343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1729,10 +1710,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3aec4782f32c8940a7e06d550aee786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PGSlider: {fileID: 0}
-  BGSlider: {fileID: 0}
-  BTNSlider: {fileID: 0}
-  buttonAudio: {fileID: 0}
 --- !u!4 &201304121
 Transform:
   m_ObjectHideFlags: 0
@@ -6604,7 +6581,23 @@ MonoBehaviour:
   - pg13
   - pg14
   - pg15
-  snare_obj: {fileID: 200146338}
+  snares:
+  - {fileID: 1979692464}
+  - {fileID: 102044519}
+  - {fileID: 1342584528}
+  - {fileID: 2097672665}
+  - {fileID: 2028656380}
+  - {fileID: 1341987041}
+  - {fileID: 1690849807}
+  - {fileID: 98903269}
+  - {fileID: 281356132}
+  - {fileID: 640978847}
+  - {fileID: 301539012}
+  - {fileID: 337274770}
+  - {fileID: 174817326}
+  - {fileID: 258900854}
+  - {fileID: 1980106310}
+  - {fileID: 1832565517}
   m_countToStop: 0
   hit_duration: 1
 --- !u!114 &961058944
@@ -13702,6 +13695,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1982823003}
+  - component: {fileID: 1982823002}
   m_Layer: 0
   m_Name: SoundSystem
   m_TagString: Untagged
@@ -13709,6 +13703,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1982823002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982823001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c24e2f7270b04449ab08394cfe9e64a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgms:
+  - {fileID: 363027781}
+  - {fileID: 1682414648}
+  - {fileID: 913701244}
+  pgMusics:
+  - {fileID: 363027781}
+  - {fileID: 1217329941}
+  - {fileID: 24292578}
 --- !u!4 &1982823003
 Transform:
   m_ObjectHideFlags: 0
@@ -14801,7 +14815,6 @@ GameObject:
   - component: {fileID: 2130837078}
   - component: {fileID: 2130837079}
   - component: {fileID: 2130837077}
-  - component: {fileID: 2130837080}
   m_Layer: 5
   m_Name: Note
   m_TagString: Untagged
@@ -14907,23 +14920,3 @@ MonoBehaviour:
   - {fileID: 250757211}
   tfNoteAppear: {fileID: 1997422583}
   goNote: {fileID: 9084493388823596029, guid: db941a13c64df6843b358fa5326a48cb, type: 3}
---- !u!114 &2130837080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130837075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c24e2f7270b04449ab08394cfe9e64a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgms:
-  - {fileID: 363027781}
-  - {fileID: 1682414648}
-  - {fileID: 913701244}
-  pgMusics:
-  - {fileID: 363027781}
-  - {fileID: 1217329941}
-  - {fileID: 24292578}
