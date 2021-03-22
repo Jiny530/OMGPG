@@ -7,6 +7,7 @@ public class Data : MonoBehaviour
     public static float[] speed = { 0f, 1f, 2f }; //곡마다 올가미 줄어드는 속도!
     public static int[] bpms = { 105, 107, 158, 0 };
     public static double[] songDelays = { 0, -13.3, -2.5 };
+    public static double[] snareDelays={0,0,0};//여기야!! 혜진아!! 여기에 딜레이 넣어!
     public static int[] hit_terms = { 4, 3, 3 };
     public static int[][] answers = new[]
     {

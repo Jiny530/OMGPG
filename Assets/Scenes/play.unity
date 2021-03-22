@@ -1729,10 +1729,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3aec4782f32c8940a7e06d550aee786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theAudio: {fileID: 0}
-  PGAudio: {fileID: 0}
-  BackgroundAudio: {fileID: 0}
-  clip: {fileID: 8300000, guid: fcfca856fff3d2945a600295772cce1c, type: 3}
+  PGSlider: {fileID: 0}
+  BGSlider: {fileID: 0}
+  BTNSlider: {fileID: 0}
+  buttonAudio: {fileID: 0}
 --- !u!4 &201304121
 Transform:
   m_ObjectHideFlags: 0
@@ -14380,12 +14380,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 551a71edb947b814aab6a9a926edf4a2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 551a71edb947b814aab6a9a926edf4a2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -0.5240822
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 551a71edb947b814aab6a9a926edf4a2,
         type: 3}
@@ -14480,7 +14480,7 @@ PrefabInstance:
     - target: {fileID: 4214030804697206448, guid: 551a71edb947b814aab6a9a926edf4a2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -145
       objectReference: {fileID: 0}
     - target: {fileID: 8746278304410049469, guid: 551a71edb947b814aab6a9a926edf4a2,
         type: 3}
@@ -14887,6 +14887,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f567c0d13c2bb4f4fa1d90817265573b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snares:
+  - {fileID: 1979692464}
+  - {fileID: 102044519}
+  - {fileID: 1342584528}
+  - {fileID: 2097672665}
+  - {fileID: 2028656380}
+  - {fileID: 1341987041}
+  - {fileID: 1690849807}
+  - {fileID: 98903269}
+  - {fileID: 281356132}
+  - {fileID: 640978847}
+  - {fileID: 301539012}
+  - {fileID: 337274770}
+  - {fileID: 174817326}
+  - {fileID: 258900854}
+  - {fileID: 1980106310}
+  - {fileID: 1832565517}
+  - {fileID: 250757211}
   tfNoteAppear: {fileID: 1997422583}
   goNote: {fileID: 9084493388823596029, guid: db941a13c64df6843b358fa5326a48cb, type: 3}
 --- !u!114 &2130837080
@@ -14909,5 +14927,3 @@ MonoBehaviour:
   - {fileID: 363027781}
   - {fileID: 1217329941}
   - {fileID: 24292578}
-  pgMusic: {fileID: 0}
-  bgm: {fileID: 0}
