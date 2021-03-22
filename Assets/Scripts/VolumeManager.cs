@@ -8,6 +8,7 @@ public class VolumeManager : MonoBehaviour
     [SerializeField] Slider PGSlider = null;
     [SerializeField] Slider BGSlider = null;
     [SerializeField] Slider BTNSlider = null;
+    [SerializeField] AudioSource feedback = null;
     
     // Start is called before the first frame update
     void Start()
@@ -23,9 +24,8 @@ public class VolumeManager : MonoBehaviour
     }
 
     public void TestPGVolume(){
-        SoundEffect.buttonAudio.volume = PGSlider.value;;
-        SoundEffect.buttonAudio.Play();
-        SoundEffect.buttonAudio.volume = BTNSlider.value;
+        feedback.volume = PGSlider.value;
+        feedback.Play();
     }
 
     public void SetBackgroundVolume()
@@ -34,9 +34,8 @@ public class VolumeManager : MonoBehaviour
     }
 
     public void TestBGVolume(){
-        SoundEffect.buttonAudio.volume = BGSlider.value;
-        SoundEffect.buttonAudio.Play();
-        SoundEffect.buttonAudio.volume = BTNSlider.value;
+        feedback.volume = BGSlider.value;
+        feedback.Play();
     }
 
     public void SetButtonVolume()
@@ -45,6 +44,7 @@ public class VolumeManager : MonoBehaviour
     }
 
     public void TestBTNVolume(){
-        SoundEffect.buttonAudio.Play();
+        feedback.volume = BTNSlider.value;
+        feedback.Play();
     }
 }
