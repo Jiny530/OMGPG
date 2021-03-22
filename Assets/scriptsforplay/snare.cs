@@ -4,9 +4,9 @@ public class snare : MonoBehaviour
 {
     // 편경 정답지에 맞춰 생성
     // 전체적으로 노트매니저와 같이가도 좋을거같음.
-
+/*
     public GameObject[] snares;
-    double currentTime = Data.songDelays[Data.selected_song] + 2.0d + Data.usersyncDelay;
+    double currentTime = Data.songDelays[Data.selected_song] + 2.0f + Data.usersyncDelay;
     int hit_term = Data.hit_terms[Data.selected_song];
     float bpm = Data.bpms[Data.selected_song];
     public bool start_sign = true;
@@ -16,7 +16,6 @@ public class snare : MonoBehaviour
 
     public void Update()
     {
-
         currentTime += Time.deltaTime;
         if (currentTime >= 60d * hit_term / bpm && start_sign)
         {
@@ -34,5 +33,5 @@ public class snare : MonoBehaviour
             num++;
         }
     }
-
+*/
 }

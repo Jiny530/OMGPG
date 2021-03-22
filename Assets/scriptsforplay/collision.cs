@@ -11,14 +11,14 @@ public class collision : MonoBehaviour
     public AudioSource[] pg_sound;
     public string[] tags;
     public static int hitCheck=-1;
-    snare snare_compo;
+    NoteManager snare_compo;
     public GameObject snare_obj;
     public float m_countToStop;
     public double hit_duration=1f;//따닥 방지변수
 
     void Start()
     {
-        snare_compo = snare_obj.GetComponent<snare>();
+        snare_compo = snare_obj.GetComponent<NoteManager>();
     }
 
     void Update()
