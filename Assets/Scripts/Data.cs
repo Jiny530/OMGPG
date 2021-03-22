@@ -31,4 +31,6 @@ public class Data : MonoBehaviour
     public static int stone = 0;
     public static int frame = 0;
     public static int stick = 0;
+
+    public static float[] volumes = {0.5f, 0.5f, 0.5f}; // 편경, 배경음악, 버튼 볼륨
 }
