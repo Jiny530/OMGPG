@@ -46,12 +46,13 @@ public class selected_thema : MonoBehaviour
                 frames[Data.frame].SetActive(true);
                 break;
 
-            defalt: //돌페이지
+            default: //돌페이지
                 for (int i = 0; i < 6; i++)
                 {
                     stones[i].SetActive(false);
                 }
                 stones[Data.stone].SetActive(true);
+                break;
         }
     }
     public void stick_select(int index)
