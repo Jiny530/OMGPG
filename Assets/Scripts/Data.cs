@@ -7,13 +7,13 @@ public class Data : MonoBehaviour
     public static float[] speed = { 0f, 1f, 2f }; //곡마다 올가미 줄어드는 속도!
     public static int[] bpms = { 105, 107, 158, 0 };
     public static double[] songDelays = { 0, -13.3, -2.5 };
-    public static double[] snareDelays={0,0,0};//여기야!! 혜진아!! 여기에 딜레이 넣어!
+    public static double[] snareDelays={0,2d,2d};//여기야!! 혜진아!! 여기에 딜레이 넣어!
     public static int[] hit_terms = { 4, 3, 3 };
     public static int[][] answers = new[]
     {
         new[] {0,0,0,0,0,0,0,0},//sync
         new[] {7, 14, 12, 14, 12, 14, 12, 14, 7, 14, 12, 14, 7, 5, 7},//상사화
-        new[] {5, 5, 10, 7, 5, 4, 12, 5, 5, 15, 13, 13, 11, 5, 12, 12, 13, 11, 8, 11, 12, 12, 12, 15, 13, 11, 5}//해리포터
+        new[] {5, 5, 10, 7, 5, 4, 12, 16, 5, 5, 15, 13, 13, 11, 5, 16, 12, 12, 13, 11, 8, 11, 12, 16, 12, 12, 15, 13, 11, 5}//해리포터
     };
 
     public static int[] best_scores = { 0, 0, 0 };
