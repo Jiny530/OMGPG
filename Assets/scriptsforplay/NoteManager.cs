@@ -26,7 +26,7 @@ public class NoteManager : MonoBehaviour
     [SerializeField] GameObject goNote = null;
     TimingManager theTimingManager;
 
-    public static double loadDelay=1.5f;
+    // public static double loadDelay=0.1f;
 
     void Start()
     {
@@ -36,10 +36,12 @@ public class NoteManager : MonoBehaviour
 
     void Update()
     {
+        /*
         if(loadDelay>0f){
             loadDelay-=Time.deltaTime;
             return;
         }//타이머 최초 시작 이전에는 1.5초간 그냥 리턴해버리는 기능
+        */
         currentTimeNote += Time.deltaTime;
         currentTimeSnare += Time.deltaTime;
         if (noteCnt >= Data.answers[Data.selected_song].Length)

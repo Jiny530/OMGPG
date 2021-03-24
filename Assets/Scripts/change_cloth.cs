@@ -25,7 +25,7 @@ public class change_cloth : MonoBehaviour
         {
             for (int i=0;i<16;i++){
                 mat = pyeongyeong[i].GetComponent<MeshRenderer>().materials;
-                mat[0] = material[Data.stone];
+                mat[0] = material[Data.stone-1];
                 pyeongyeong[i].GetComponent<MeshRenderer>().materials = mat;
             }
         }
@@ -38,7 +38,7 @@ public class change_cloth : MonoBehaviour
         {
             for (int i=0;i<16;i++){
                 mat = frames[i].GetComponent<MeshRenderer>().materials;
-                mat[0] = material[Data.frame];
+                mat[0] = material[Data.frame-1];
                 frames[i].GetComponent<MeshRenderer>().materials = mat;
             }
         }
