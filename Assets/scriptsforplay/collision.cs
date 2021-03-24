@@ -19,6 +19,9 @@ public class collision : MonoBehaviour
 
     void Start()
     {
+        for (int i=0; i<pg_sound.Length; i++){
+            pg_sound[i].volume = Data.volumes[0];
+        }
        // snare_compo = snare_obj.GetComponent<snare>();
     }
 

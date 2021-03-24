@@ -31,7 +31,7 @@ public class selected_thema : MonoBehaviour
         switch (index)
         {
             case 0: //스틱페이지
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < 6; i++)
                 {
                     sticks[i].SetActive(false);
                 }
@@ -57,23 +57,33 @@ public class selected_thema : MonoBehaviour
     }
     public void stick_select(int index)
     {
+        if (Data.acquired_stick[index] == true){
         sticks[Data.stick].SetActive(false);
         Data.stick = index;
         sticks[index].SetActive(true);
+        }
     }
 
     public void frame_select(int index)
     {
+        if (Data.acquired_frame[index] == true){
         frames[Data.frame].SetActive(false);
         Data.frame = index;
         frames[index].SetActive(true);
+        }
     }
 
     public void stone_select(int index)
     {
+        if (Data.acquired_stone[index] == true){
         stones[Data.stone].SetActive(false);
         Data.stone = index;
         stones[index].SetActive(true);
+        }
+    }
+
+    void Start(){
+        panel_select(0);
     }
 
 }

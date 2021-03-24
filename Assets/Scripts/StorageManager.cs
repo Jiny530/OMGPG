@@ -82,4 +82,8 @@ public class StorageManager : MonoBehaviour
         }
     }
 
+    void Start(){
+        storageManage(0);
+    }
+
 }
