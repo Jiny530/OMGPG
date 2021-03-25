@@ -15,7 +15,7 @@ public class ResultManager : MonoBehaviour
     public Text finalScore;
     public Text bestScore;
     public Text newReward;
-    public Image image;
+    //public Image image;
     public Toggle left;
     public Toggle center;
     public Toggle right;

@@ -7,8 +7,8 @@ public class SoundSystem : MonoBehaviour
     [SerializeField] AudioSource[] bgms = null;
     [SerializeField] AudioSource[] pgMusics = null;
 
-    public static AudioSource pgMusic;
-    public static AudioSource bgm;
+    public AudioSource pgMusic;
+    public AudioSource bgm;
     bool songPlayed=false;
 
     void Start()

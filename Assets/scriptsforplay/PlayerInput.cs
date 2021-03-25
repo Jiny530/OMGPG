@@ -76,20 +76,8 @@ public class PlayerInput : MonoBehaviour
         judgePrefab[1].SetActive(false);//숨겼다가
         judgePrefab[2].SetActive(false);//숨겼다가
         judgePrefab[3].SetActive(false);//숨겼다가
-      //  judgePos[timeVal].transform.localPosition = effect_positions[TimingManager.noteAns];//옮기고
         judgePos[timeVal].transform.localPosition = effect_positions[AnsManager.CurrentAns];//옮기고
-        //만약에 아래에 위치한 피드백이 너무 안보인다 싶으면 돌려주기. transform.localrotation
-        /*if (AnsManager.CurrentAns < 8)
-        {
-            judgePrefab[timeVal].transform.localRotation = Quaternion.Euler(0.0f, -20f, 0.0f);
-        }
-        else{
-            judgePrefab[timeVal].transform.localRotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
-        }
-        */
         judgePrefab[timeVal].SetActive(true);//나타나기.
-
-
 
         //파티클 실행
         particles[collision.hitCheck].Play();
