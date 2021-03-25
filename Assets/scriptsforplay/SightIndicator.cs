@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SightIndicator : MonoBehaviour
-{
+{/*
     public GameObject right;
     public GameObject left;
     public Transform head;
@@ -22,5 +22,5 @@ public class SightIndicator : MonoBehaviour
     public void indicatorOff(){
         right.SetActive(false);
         left.SetActive(false);
-    }
+    }*/
 }
