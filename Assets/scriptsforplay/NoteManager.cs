@@ -31,6 +31,7 @@ public class NoteManager : MonoBehaviour
 
     void Start()
     {
+        finished=false;
         theTimingManager = GetComponent<TimingManager>();
         currentTimeNote = Data.songDelays[Data.selected_song]+1.5f+ Data.usersyncDelay;
         currentTimeSnare = Data.songDelays[Data.selected_song] + Data.snareDelays[Data.selected_song] + Data.usersyncDelay;

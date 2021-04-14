@@ -20,7 +20,11 @@ public class ResultManager : MonoBehaviour
     public Toggle center;
     public Toggle right;
     public Vector3 tmp;
-
+    
+    void Start(){
+        PG.SetActive(true);
+        gaktoe.SetActive(true);
+    }
     // Update is called once per frame
     void Update()
     {
