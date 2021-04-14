@@ -54,12 +54,6 @@ public class PlayerInput : MonoBehaviour
             {
                 feedbackAnim();
                 playScore += (10 - timeVal * 2);//점수를 더해서 넣어준다.
-                Debug.Log("올바른 돌 : "+collision.hitCheck);
-                Debug.Log("$$누적 점수$$ " + playScore);
-            }
-            else
-            {//디버깅용
-                Debug.Log("틀린 돌 "+collision.hitCheck+"정답은  "+AnsManager.CurrentAns);
             }
             collision.hitCheck = -1;//검사 완료 후 돌 상태 -1로 돌려놓기
         }
