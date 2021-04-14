@@ -55,6 +55,7 @@ public class NoteManager : MonoBehaviour
 
     void Start()
     {
+        finished=false;
         //노래를 재생하는 코드
         pgMusic=pgMusics[Data.selected_song];
         bgm=bgms[Data.selected_song];
@@ -62,15 +63,11 @@ public class NoteManager : MonoBehaviour
         bgm.volume = Data.volumes[1];
         pgMusic.Play(0);
         bgm.Play(0);
-
         theTimingManager = GetComponent<TimingManager>();
         currentTimeNote = Data.songDelays[Data.selected_song]+1.5f+ Data.usersyncDelay;
         currentTimeSnare = Data.songDelays[Data.selected_song] + Data.snareDelays[Data.selected_song] + Data.usersyncDelay;
         noteCnt=0;//로드시마다 초기화.
         num=0;
-    
-        bgm.timeSamples=pgMusic.timeSamples;//두개의 노래 트랙 동기화
-
     }
 
     void Update()
