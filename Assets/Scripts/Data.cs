@@ -6,8 +6,8 @@ public class Data : MonoBehaviour
     public static string[] song_list = {"Free", "상사화", "Hedwig's Theme" };
     public static float[] speed = { 0f, 1f, 2f }; //곡마다 올가미 줄어드는 속도!
     public static int[] bpms = { 105, 107, 158, 0 };
-    public static double[] songDelays = { 0, -13.35, -2.5 };
-    public static double[] snareDelays={0,2d,2d};//여기야!! 혜진아!! 여기에 딜레이 넣어!
+    public static double[] songDelays = { 0, -13.4, -2.5 };
+    public static double[] snareDelays={0,2d,2d};
     public static int[] hit_terms = { 4, 3, 3 };
     public static int[][] answers = new[]
     {
@@ -27,7 +27,7 @@ public class Data : MonoBehaviour
     public static int[] reward_index = { 0,0,0,0};//인덱스 순서는 곡 순서와 동일
     public static int[] reward_type = {-1,3,1,2};//0 frame, 1 stone, 2 stick, 3 info
 
-    public static int selected_song=0, user_lev, user_ex, dic_lev, volume;
+    public static int selected_song=1, user_lev, user_ex, dic_lev, volume;
     public static double usersyncDelay;
     public static int stone = 0;
     public static int frame = 0;

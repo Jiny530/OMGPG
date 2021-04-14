@@ -6,12 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class NoteManager : MonoBehaviour
 {
-    //노래 재생을 위한 변수
-    [SerializeField] AudioSource[] bgms = null;
-    [SerializeField] AudioSource[] pgMusics = null;
-    public AudioSource pgMusic;
-    public AudioSource bgm;
-
     //indicator를 위한 변수
     public GameObject right;
     public GameObject left;
@@ -32,37 +26,15 @@ public class NoteManager : MonoBehaviour
     double delay;//마지막에 팝업 뜨기 전에 딜레이 주려고 만든 변수
     public static bool finished;
 
-    //종료 팝업 관련 변수
-    [SerializeField] GameObject Level_completed;
-    [SerializeField] GameObject Level_failed;
-    [SerializeField] GameObject PG;
-    [SerializeField] GameObject laser;
-    [SerializeField] GameObject gaktoe;
-    [SerializeField] Transform leaserPos;
-    public Text finalScore;
-    public Text bestScore;
-    public Text newReward;
-    //public Image image;
-    public Toggle star3;
-    public Toggle star1;
-    public Toggle star2;
-    public Vector3 tmp;
-
-
     //올가미 생성을 위한 변수
     [SerializeField] public GameObject[] snares;
     int num = 0; //현재 정답 순서
-
+//시간으로 바꾸는 그런 원대한 도전의 시작에서 찰칵!
+public static double poison_timer=0;
+public static int[] ansPlay = Data.answers[Data.selected_song];//지금 플레이하는 곡의 정답 배열
     void Start()
     {
         finished=false;
-        //노래를 재생하는 코드
-        pgMusic=pgMusics[Data.selected_song];
-        bgm=bgms[Data.selected_song];
-        pgMusic.volume = Data.volumes[0];
-        bgm.volume = Data.volumes[1];
-        pgMusic.Play(0);
-        bgm.Play(0);
         theTimingManager = GetComponent<TimingManager>();
         currentTimeNote = Data.songDelays[Data.selected_song]+1.5f+ Data.usersyncDelay;
         currentTimeSnare = Data.songDelays[Data.selected_song] + Data.snareDelays[Data.selected_song] + Data.usersyncDelay;
@@ -72,6 +44,7 @@ public class NoteManager : MonoBehaviour
 
     void Update()
     {
+        poison_timer+=Time.deltaTime;
         currentTimeNote += Time.deltaTime;
         currentTimeSnare += Time.deltaTime;
 
@@ -82,18 +55,29 @@ public class NoteManager : MonoBehaviour
             //팝업 엑티브
             if (delay>=4)
             {
-                FinishedGame();
-                //finished=true;
+                finished=true;
             }
         }
         if (currentTimeNote >= 60d*hit_term / bpm&&playActive)
         {//다음 비트가 나올 차례가 되면
-            GameObject t_note = Instantiate(goNote, tfNoteAppear.position, Quaternion.identity);//노트를 등장 시키기
+            GameObject t_note = Instantiate(goNote, tfNoteAppear.position, Quaternion.identity);
+            
             t_note.transform.SetParent(this.transform);
             theTimingManager.boxNoteList.Add(t_note);
-            currentTimeNote -= 60d*hit_term / bpm;//오차가 쬐끔 생기기 때문에... 게임은 프레임 타임이어서,... 그거 챙기려고..0으로 초기화x 쌓이면 점점 밀림
+            currentTimeNote -= 60d*hit_term / bpm;
             noteCnt++;
         }
+        
+        //????????????????????????????????????????????????????????????????????????????????????????????????????????????
+        //if(currentTimeNote>=60d*hit_term-){}
+        //if(currentTimeNote>=60d*hit_term-0.6f){//일찍 친 범위의 정답 레인지를 위해 미리 정답값 바꿔줌
+        //    ansNow= ansPlay[noteCnt-1];
+        //    noteCnt++;
+        //}
+        //채점은 collision에서 그 타격 당시의 current time을 받아가서 몇인지에 따라서 결정하기
+        
+        //????????????????????????????????????????????????????????????????????????????????????????????????????????????
+        
         if (currentTimeSnare >= 60d*hit_term / bpm && num < Data.answers[Data.selected_song].Length)
         {//dhf
             // 다음 비트 나올 간격이 지나면 다음올가미도 활성화
@@ -136,52 +120,5 @@ public class NoteManager : MonoBehaviour
     public void indicatorOff(){
         left.SetActive(false);
         right.SetActive(false);
-    }
-
-    private void FinishedGame()
-    {
-        finalScore.text = PlayerInput.playScore.ToString();
-        if (PlayerInput.playScore > Data.best_scores[Data.selected_song])
-        {
-            Data.best_scores[Data.selected_song] = PlayerInput.playScore;
-        }
-        bestScore.text = Data.best_scores[Data.selected_song].ToString();
-        if(PlayerInput.playScore>0.6*Data.max_scores[Data.selected_song] && Data.best_scores[Data.selected_song]<0.6*Data.max_scores[Data.selected_song])//&&아직 획득되지 않은 아이템이면 이라는 조건 필요.
-        {
-            newReward.enabled = true;
-           // image.enabled = true;
-            switch (Data.reward_type[Data.selected_song])
-            {
-                case 0://frame
-                    Data.acquired_frame[Data.reward_index[Data.selected_song]] = true;
-                    break;
-                case 1://stone
-                    Data.acquired_stone[Data.reward_index[Data.selected_song]] = true;
-                    break;
-                case 2://stick
-                    Data.acquired_stick[Data.reward_index[Data.selected_song]] = true;
-                    break;
-                case 3://info
-                    Data.acquired_info[Data.reward_index[Data.selected_song]] = true;
-                    break;
-            }
-        }
-        if(PlayerInput.playScore > 0.5 * Data.max_scores[Data.selected_song])
-        {
-            star3.isOn = true;
-            if(PlayerInput.playScore > 0.7 * Data.max_scores[Data.selected_song])
-            {
-                star2.isOn = true;
-                if (PlayerInput.playScore > 0.9 * Data.max_scores[Data.selected_song])
-                {
-                    star1.isOn = true;
-                }
-            }
-        }
-        Level_completed.SetActive(true);
-        PG.SetActive(false);
-        gaktoe.SetActive(false);
-        laser.SetActive(true);
-        laser.transform.localPosition=leaserPos.localPosition;
     }
 }

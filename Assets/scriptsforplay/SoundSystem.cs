@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SoundSystem : MonoBehaviour
-{/*
+{
     [SerializeField] AudioSource[] bgms = null;
     [SerializeField] AudioSource[] pgMusics = null;
 
@@ -23,5 +23,5 @@ public class SoundSystem : MonoBehaviour
 
     void Update(){
         bgm.timeSamples=pgMusic.timeSamples;
-    }*/
+    }
 }

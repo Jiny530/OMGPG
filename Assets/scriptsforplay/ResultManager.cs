@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ResultManager : MonoBehaviour
-{/*
+{
     [SerializeField] GameObject Level_completed;
     [SerializeField] GameObject Level_failed;
     [SerializeField] GameObject PG;
@@ -80,5 +80,5 @@ public class ResultManager : MonoBehaviour
                 }
             }
         }
-    }*/
+    }
 }
