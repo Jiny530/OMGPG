@@ -1571,19 +1571,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec583cc5bdd4bd4b975478b670a2d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level_completed: {fileID: 478328308}
-  Level_failed: {fileID: 680931562}
-  PG: {fileID: 224091007}
-  laser: {fileID: 1408006820}
-  gaktoe: {fileID: 961058935}
-  leaserPos: {fileID: 1408006823}
-  finalScore: {fileID: 1966673271}
-  bestScore: {fileID: 24770767}
-  newReward: {fileID: 579048415}
-  left: {fileID: 2009252423}
-  center: {fileID: 313380547}
-  right: {fileID: 9997755}
-  tmp: {x: 0, y: 0, z: 0}
 --- !u!114 &200146344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1596,9 +1583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0aac4035bea4b449a7bba395eebaa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  right: {fileID: 1518129593}
-  left: {fileID: 668344667}
-  head: {fileID: 2072190412}
 --- !u!1 &201304118
 GameObject:
   m_ObjectHideFlags: 0
@@ -4088,8 +4072,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -178.52011, y: -1.3}
-  m_SizeDelta: {x: 335.8089, y: 123.44655}
+  m_AnchoredPosition: {x: -168.3, y: 1.6}
+  m_SizeDelta: {x: 355.19116, y: 117.74628}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &528736799
 BoxCollider2D:
@@ -4104,7 +4088,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.13926697, y: 0.13690948}
+  m_Offset: {x: 0.78736115, y: 0.13690948}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4115,7 +4099,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 397.29337, y: 120.2796}
+  m_Size: {x: 358.63776, y: 120.2796}
   m_EdgeRadius: 0
 --- !u!114 &528736800
 MonoBehaviour:
@@ -15143,16 +15127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c24e2f7270b04449ab08394cfe9e64a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgms:
-  - {fileID: 363027781}
-  - {fileID: 1682414648}
-  - {fileID: 913701244}
-  pgMusics:
-  - {fileID: 363027781}
-  - {fileID: 1217329941}
-  - {fileID: 24292578}
-  pgMusic: {fileID: 0}
-  bgm: {fileID: 0}
 --- !u!4 &1982823003
 Transform:
   m_ObjectHideFlags: 0
@@ -16336,9 +16310,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f567c0d13c2bb4f4fa1d90817265573b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgms:
+  - {fileID: 363027781}
+  - {fileID: 1682414648}
+  - {fileID: 913701244}
+  pgMusics:
+  - {fileID: 363027781}
+  - {fileID: 1217329941}
+  - {fileID: 24292578}
+  pgMusic: {fileID: 0}
+  bgm: {fileID: 0}
   right: {fileID: 1518129593}
   left: {fileID: 668344667}
   head: {fileID: 2072190412}
+  tfNoteAppear: {fileID: 1997422583}
+  goNote: {fileID: 9084493388823596029, guid: db941a13c64df6843b358fa5326a48cb, type: 3}
+  Level_completed: {fileID: 478328308}
+  Level_failed: {fileID: 680931562}
+  PG: {fileID: 224091007}
+  laser: {fileID: 1408006820}
+  gaktoe: {fileID: 961058935}
+  leaserPos: {fileID: 1408006823}
+  finalScore: {fileID: 1966673271}
+  bestScore: {fileID: 24770767}
+  newReward: {fileID: 579048415}
+  star3: {fileID: 9997755}
+  star1: {fileID: 313380547}
+  star2: {fileID: 2009252423}
+  tmp: {x: 0, y: 0, z: 0}
   snares:
   - {fileID: 1979692464}
   - {fileID: 102044519}
@@ -16357,5 +16356,3 @@ MonoBehaviour:
   - {fileID: 1980106310}
   - {fileID: 1832565517}
   - {fileID: 250757211}
-  tfNoteAppear: {fileID: 1997422583}
-  goNote: {fileID: 9084493388823596029, guid: db941a13c64df6843b358fa5326a48cb, type: 3}
