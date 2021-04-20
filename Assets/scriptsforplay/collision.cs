@@ -67,7 +67,7 @@ public class collision : MonoBehaviour
                     if (snares[i].activeSelf) snares[i].SetActive(false);
                 }
                 else{ //자유연주모드
-                    Debug.Log(velocity);
+                    //Debug.Log(velocity);
                     pg_sound[i].volume = Data.volumes[0] * (float)velocity;
                     pg_sound[i].PlayOneShot(pg_sound[i].clip);
                     Vibrate(50* (float)velocity);
