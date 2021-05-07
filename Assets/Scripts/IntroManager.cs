@@ -7,7 +7,7 @@ public class IntroManager : MonoBehaviour
 {
 // can ignore the update, it's just to make the coroutines get called for example
 
-    int flag = 0;
+ //   int flag = 0;
     [SerializeField] Text text1 = null;
     [SerializeField] Text text2 = null;
 

@@ -36,12 +36,14 @@ public class PlayerInput : MonoBehaviour
     TimingManager theTimingManager;
     public int timeVal;
     public static int playScore;
-   
+    public static bool timer_init;
 
     private void Start()
     {
+        playScore=0;
         theTimingManager = FindObjectOfType<TimingManager>();
         set_effect_positions();
+        timer_init=false;
     }
 
     void Update()
@@ -49,6 +51,7 @@ public class PlayerInput : MonoBehaviour
         if (collision.hitCheck!=-1)//검사 후 돌 상태 -1로 돌려놓기.
         {
             timeVal=theTimingManager.CheckTiming();//가장 맞는 것 부터 0 1 2 3
+            Debug.Log("time return "+timeVal);
             //if (TimingManager.noteAns == collision.hitCheck)
             if (AnsManager.CurrentAns == collision.hitCheck)
             {
@@ -61,6 +64,12 @@ public class PlayerInput : MonoBehaviour
         if (OVRInput.GetDown(OVRInput.Button.Two, OVRInput.Controller.Touch))
         {
             SceneManager.LoadScene("RealMain");
+        }
+        if (OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.Touch)){//타이머 이니셜라이즈 여기서
+            SoundSystem.song_init();
+            NoteManager.currentTimeNote = Data.songDelays[Data.selected_song]+1.5f+ Data.usersyncDelay;
+            NoteManager.currentTimeSnare = Data.songDelays[Data.selected_song] + Data.snareDelays[Data.selected_song] + Data.usersyncDelay;
+            timer_init=true;
         }
     }
 
