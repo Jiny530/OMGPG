@@ -30,21 +30,23 @@ public class NoteManager : MonoBehaviour
     [SerializeField] public GameObject[] snares;
     int num = 0; //현재 정답 순서
 //시간으로 바꾸는 그런 원대한 도전의 시작에서 찰칵!
-public static double poison_timer=0;
-public static int[] ansPlay = Data.answers[Data.selected_song];//지금 플레이하는 곡의 정답 배열
+//public static double poison_timer=0;
+//public static int[] ansPlay = Data.answers[Data.selected_song];//지금 플레이하는 곡의 정답 배열
     void Start()
     {
         finished=false;
         theTimingManager = GetComponent<TimingManager>();
-        currentTimeNote = Data.songDelays[Data.selected_song]+1.5f+ Data.usersyncDelay;
-        currentTimeSnare = Data.songDelays[Data.selected_song] + Data.snareDelays[Data.selected_song] + Data.usersyncDelay;
+       // currentTimeNote = Data.songDelays[Data.selected_song]+1.5f+ Data.usersyncDelay;
+       // currentTimeSnare = Data.songDelays[Data.selected_song] + Data.snareDelays[Data.selected_song] + Data.usersyncDelay;
         noteCnt=0;//로드시마다 초기화.
         num=0;
     }
 
     void Update()
     {
-        poison_timer+=Time.deltaTime;
+        if(PlayerInput.timer_init==true){
+        
+        
         currentTimeNote += Time.deltaTime;
         currentTimeSnare += Time.deltaTime;
 
@@ -93,6 +95,7 @@ public static int[] ansPlay = Data.answers[Data.selected_song];//지금 플레�
             indicatorL();
         else
             indicatorOff();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)//노트가 파괴되도록 하기 위해서

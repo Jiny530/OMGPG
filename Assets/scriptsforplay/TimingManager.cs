@@ -18,16 +18,22 @@ public class TimingManager : MonoBehaviour
             timingBoxs[i].Set(Center.localPosition.x - timingRect[i].rect.width / 2, 
                               Center.localPosition.x + timingRect[i].rect.width / 2);//하나의 판정 범위 0이 제일 좁고, bad로 갈 수록 범위 커짐
         }
+        Debug.Log("1 "+timingBoxs[0]);
+        Debug.Log("2 "+timingBoxs[1]);
+        Debug.Log("3 "+timingBoxs[2]);
+        Debug.Log("4 "+timingBoxs[3]);
     }
 
     public int CheckTiming()
     {
+        
         for(int i=0; i < boxNoteList.Count; i++)//각각 판정 단계 만큼 반복문
         {
+            Debug.Log("rect "+boxNoteList[i].transform.localPosition.x);
             float t_notePosX = boxNoteList[i].transform.localPosition.x;
             for(int x = 0; x < timingBoxs.Length; x++)//노트만큼
             {
-                if(timingBoxs[x].x<=t_notePosX && t_notePosX<=timingBoxs[i].y)//범위에 들어왔누ㅡㄴ지..
+                if(timingBoxs[x].x<=t_notePosX && t_notePosX<=timingBoxs[x].y)//범위에 들어왔누ㅡㄴ지..
                 {
                     boxNoteList[i].GetComponent<Note>().HideNote();
                     boxNoteList.RemoveAt(i);

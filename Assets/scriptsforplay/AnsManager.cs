@@ -10,13 +10,11 @@ public class AnsManager : MonoBehaviour
     { 
         //TimingManager.noteAns=col.GetComponent<Note>().ans;
         CurrentAns = col.GetComponent<Note>().ans;
-        //Debug.Log("현재타임 값- 중앙 프레임 충돌"+NoteManager.poison_timer);
     }
     private void OnTriggerExit2D(Collider2D col)
     {
         //TimingManager.noteAns=16;
         CurrentAns = 16;
-        Debug.Log("현재타임 값- 중앙프레임 종료"+NoteManager.poison_timer);
 
     }
 }

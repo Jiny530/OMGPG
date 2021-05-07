@@ -9,11 +9,9 @@ public class indicatorNow : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     { 
         comingAns= col.GetComponent<Note>().ans;
-        Debug.Log("현재타임 값- ans start 충돌"+NoteManager.poison_timer);
     }
     private void OnTriggerExit2D(Collider2D col)
     {
         comingAns = 16;
-        Debug.Log("현재타임 값- ans end 종료"+NoteManager.poison_timer);
     }
 }
