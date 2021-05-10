@@ -53,6 +53,12 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Storage");
     }
 
+    public void go_Ranking()
+    {
+        //dataSave();
+        SceneManager.LoadScene("Ranking");
+    }
+
     public void ExitGame()
     {
 #if UNITY_EDITOR
