@@ -58,6 +58,7 @@ public class NoteManager : MonoBehaviour
             if (delay>=4)
             {
                 finished=true;
+                SceneManager.LoadScene("Ranking");
             }
         }
         if (currentTimeNote >= 60d*hit_term / bpm&&playActive)

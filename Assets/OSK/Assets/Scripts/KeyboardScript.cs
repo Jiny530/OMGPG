@@ -6,27 +6,32 @@ using TMPro;
 public class KeyboardScript : MonoBehaviour
 {
 
-    public TMP_InputField TextField;
+    public GameObject TextField;
     public GameObject EngLayoutSml, EngLayoutBig, SymbLayout, RankingUI, completeUI;
     public static GameObject ui;
-    
+    private TextMeshProUGUI TMPtext;
+    RectTransform rect;
     void Start()
     {
-        
+        TMPtext = TextField.GetComponent<TextMeshProUGUI>();
+
+        rect = completeUI.GetComponent<RectTransform>();
+        //rect.position = new Vector3((float)-2.7, (float)-102.5, 0);
+        //rect.sizeDelta = new Vector2(rect.sizeDelta.x, 785);
     }
 
     public void alphabetFunction(string alphabet)
     {
 
-
-        TextField.text=TextField.text + alphabet;
+        if (TMPtext.text == "Enter Name") TMPtext.text = "";
+        TMPtext.text=TMPtext.text + alphabet;
 
     }
 
     public void BackSpace()
     {
 
-        if(TextField.text.Length>0) TextField.text= TextField.text.Remove(TextField.text.Length-1);
+        if(TMPtext.text.Length>0) TMPtext.text= TMPtext.text.Remove(TMPtext.text.Length-1);
 
     }
 
@@ -50,16 +55,17 @@ public class KeyboardScript : MonoBehaviour
     public void close()
     {
         //텍스트필드 내용 저장
-        if (TextField.text.Length > 0)
+        if (TMPtext.text.Length > 0)
         {
-            // 유저 닉네임변수 = TextField.text;
-            RectTransform rect = ui.GetComponent<RectTransform>();
-            rect.position = new Vector3((float)-2.7, 18, 0);
-            rect.sizeDelta = new Vector2(rect.sizeDelta.x, 545);
-            CloseAllLayouts();
+            Debug.Log("들어옴");
+            // 유저 닉네임변수 = TMPtext.text;
+            //rect.position = new Vector3((float)-2.7, 18, 0);
             completeUI.SetActive(false);
             RankingUI.SetActive(true);
+            rect.sizeDelta = new Vector2(rect.sizeDelta.x, 545);
+            CloseAllLayouts();
         }
+        Debug.Log("뭐임");
         
         //ui 원상복귀, 끄고, 랭킹저장, 랭킹 ui 띄우기
         
@@ -68,8 +74,7 @@ public class KeyboardScript : MonoBehaviour
 
     public void uiStretch()
     {
-        RectTransform rect = ui.GetComponent<RectTransform>();
-        rect.position = new Vector3((float)-2.7, (float)-102.5, 0);
+        //rect.position = new Vector3((float)-2.7, (float)-102.5, 0);
         rect.sizeDelta = new Vector2(rect.sizeDelta.x, 785);
 
     }
