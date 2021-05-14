@@ -9,13 +9,18 @@ public class Data : MonoBehaviour
     public static double[] songDelays = { 0, -13.4, -2.5 };
     public static double[] snareDelays={0,2d,2d};
     public static int[] hit_terms = { 4, 3, 3 };
+    public static double[] note_terms={4,40000,20000};
     public static int[][] answers = new[]
     {
         new[] {0,0,0,0,0,0,0,0},//sync
         new[] {7, 14, 12, 14, 12, 14, 12, 14, 7, 14, 12, 14, 7, 5, 7},//상사화
         new[] {5, 5, 10, 7, 5, 4, 12, 16, 5, 5, 15, 13, 13, 11, 5, 16, 12, 12, 13, 11, 8, 11, 12, 16, 12, 12, 15, 13, 11, 5}//해리포터
     };
-
+    public static double[][] answers_tsample = new[]{
+        new[] {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0},//sync
+        new[] {665301.6, 739938.3, 812614.6, 885683.0, 959379.3, 1033702.6, 1107477.3, 1179056.6, 1252909.3, 1327154.3, 1400694.0, 1473840.3, 1548006.6, 1618645.0, 1694066.0},//상사화
+        new[] {5.0, 5.0, 10.0, 7.0, 5.0, 4.0, 12.0, 16.0, 5.0, 5.0, 15.0, 13.0, 13.0, 11.0, 5.0, 16.0, 12.0, 12.0, 13.0, 11.0, 8.0, 11.0, 12.0, 16.0, 12.0, 12.0, 15.0, 13.0, 11.0, 5.0}//해리포터
+    };
     public static int[] best_scores = { 0, 0, 0 };
     public static int[] max_scores = { 0, 150, 270 };
 
@@ -34,4 +39,5 @@ public class Data : MonoBehaviour
     public static int stick = 0;
 
     public static float[] volumes = {0.5f, 0.5f, 0.5f}; // 편경, 배경음악, 버튼 볼륨
+    public static double hit_tsample;
 }

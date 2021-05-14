@@ -52,9 +52,9 @@ public class collision : MonoBehaviour
 
     public void OnCollisionEnter(Collision col)
     {
-        if (hit_duration < 0.3)//따닥 방지
+        if (hit_duration < 0.3){//따닥 방지
             return;
-
+        }
         //OVRInput.SetControllerVibration(0.3f, 0.3f, OVRInput.Controller.RTouch);
 
         for (int i = 0; i < 16; i++)
@@ -64,10 +64,9 @@ public class collision : MonoBehaviour
                 if (Data.selected_song != 0){ //리듬게임 모드
                     pg_sound[i].PlayOneShot(pg_sound[i].clip);
                     Vibrate(50f);
-                    if (snares[i].activeSelf) snares[i].SetActive(false);
+                    //if (snares[i].activeSelf) snares[i].SetActive(false);
                 }
                 else{ //자유연주모드
-                    //Debug.Log(velocity);
                     pg_sound[i].volume = Data.volumes[0] * (float)velocity;
                     pg_sound[i].PlayOneShot(pg_sound[i].clip);
                     Vibrate(50* (float)velocity);
@@ -76,7 +75,8 @@ public class collision : MonoBehaviour
                 break;
             }
         }
-        hit_duration = 0f;//0.5초간 다시 충돌 함수가 호출되지 않도록 구현,, 너무 길다 싶으면 줄일 수도 있구여@ 한 프레임은 0.2초 정도 하는 것 같음.
+        Data.hit_tsample=SoundSystem.bgm.timeSamples;
+        hit_duration = 0f;
     }
 
     void Vibrate(float ms)

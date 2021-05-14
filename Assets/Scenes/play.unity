@@ -1441,6 +1441,8 @@ GameObject:
   - component: {fileID: 200146342}
   - component: {fileID: 200146343}
   - component: {fileID: 200146344}
+  - component: {fileID: 200146346}
+  - component: {fileID: 200146345}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1596,6 +1598,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0aac4035bea4b449a7bba395eebaa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &200146345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200146338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce818b641fc7cad47950e1f648c1bc9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &200146346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200146338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f567c0d13c2bb4f4fa1d90817265573b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  right: {fileID: 1518129593}
+  left: {fileID: 668344667}
+  head: {fileID: 2072190412}
+  tfNoteAppear: {fileID: 1997422583}
+  goNote: {fileID: 9084493388823596029, guid: db941a13c64df6843b358fa5326a48cb, type: 3}
+  snares:
+  - {fileID: 1979692464}
+  - {fileID: 102044519}
+  - {fileID: 1342584528}
+  - {fileID: 2097672665}
+  - {fileID: 2028656380}
+  - {fileID: 1341987041}
+  - {fileID: 1690849807}
+  - {fileID: 98903269}
+  - {fileID: 281356132}
+  - {fileID: 640978847}
+  - {fileID: 301539012}
+  - {fileID: 337274770}
+  - {fileID: 174817326}
+  - {fileID: 258900854}
+  - {fileID: 1980106310}
+  - {fileID: 1832565517}
+  - {fileID: 250757211}
 --- !u!1 &201304118
 GameObject:
   m_ObjectHideFlags: 0
@@ -3073,7 +3122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &399181295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12998,7 +13047,6 @@ GameObject:
   - component: {fileID: 1573339059}
   - component: {fileID: 1573339062}
   - component: {fileID: 1573339061}
-  - component: {fileID: 1573339063}
   - component: {fileID: 1573339060}
   m_Layer: 5
   m_Name: ansManager
@@ -13089,18 +13137,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573339058}
   m_CullTransparentMesh: 0
---- !u!114 &1573339063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573339058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce818b641fc7cad47950e1f648c1bc9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1614061973 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8297589562668971328, guid: 95dcbd7f94a35924baf72a9ff8fd31c5,
@@ -16253,7 +16289,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2130837076}
   - component: {fileID: 2130837078}
-  - component: {fileID: 2130837079}
   - component: {fileID: 2130837077}
   m_Layer: 5
   m_Name: Note
@@ -16295,13 +16330,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd49c5bf3cc47f44780168bb202c6b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxNoteList: []
-  Center: {fileID: 410293280}
-  timingRect:
-  - {fileID: 929427264}
-  - {fileID: 604377510}
-  - {fileID: 428740736}
-  - {fileID: 1615095153}
 --- !u!61 &2130837078
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16328,38 +16356,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 23.58142, y: 101.9288}
   m_EdgeRadius: 0
---- !u!114 &2130837079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130837075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f567c0d13c2bb4f4fa1d90817265573b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  right: {fileID: 1518129593}
-  left: {fileID: 668344667}
-  head: {fileID: 2072190412}
-  tfNoteAppear: {fileID: 1997422583}
-  goNote: {fileID: 9084493388823596029, guid: db941a13c64df6843b358fa5326a48cb, type: 3}
-  snares:
-  - {fileID: 1979692464}
-  - {fileID: 102044519}
-  - {fileID: 1342584528}
-  - {fileID: 2097672665}
-  - {fileID: 2028656380}
-  - {fileID: 1341987041}
-  - {fileID: 1690849807}
-  - {fileID: 98903269}
-  - {fileID: 281356132}
-  - {fileID: 640978847}
-  - {fileID: 301539012}
-  - {fileID: 337274770}
-  - {fileID: 174817326}
-  - {fileID: 258900854}
-  - {fileID: 1980106310}
-  - {fileID: 1832565517}
-  - {fileID: 250757211}
