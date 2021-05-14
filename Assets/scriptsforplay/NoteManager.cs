@@ -53,7 +53,7 @@ double sampleT;
                 delay +=Time.deltaTime;
                 playActive = false;
             
-                if (delay>=6){
+                if (delay>=4){
                     finished=true;
                     SceneManager.LoadScene("Ranking");
                 }
