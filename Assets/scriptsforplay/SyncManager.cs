@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 /* play scene의 playerInput과 동일한 역할, 대신 시간값을 측정하도록 수정  sync bpm은 105*/
 public class SyncManager : MonoBehaviour
 {
-    TimingManager theTimingManager;
+   //TimingManager theTimingManager;
     double timeMid;
     double timer;
     double sum;
@@ -15,7 +15,7 @@ public class SyncManager : MonoBehaviour
 
     private void Start()
     {
-        theTimingManager = FindObjectOfType<TimingManager>();
+       // theTimingManager = FindObjectOfType<TimingManager>();
     }
 
     void Update()

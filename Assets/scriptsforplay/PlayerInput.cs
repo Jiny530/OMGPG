@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -33,7 +34,7 @@ public class PlayerInput : MonoBehaviour
         effect_positions[0]  = new Vector3( -1.123f, -0.472f, -0.472f);
     }
 
-    TimingManager theTimingManager;
+  //  TimingManager theTimingManager;
     public int timeVal;
     public static int playScore;
     public static bool timer_init;
@@ -41,31 +42,32 @@ public class PlayerInput : MonoBehaviour
     private void Start()
     {
         playScore=0;
-        theTimingManager = FindObjectOfType<TimingManager>();
+       // theTimingManager = FindObjectOfType<TimingManager>();
         set_effect_positions();
         timer_init=false;
     }
 
     void Update()
     {
-        if (collision.hitCheck!=-1)//검사 후 돌 상태 -1로 돌려놓기.
+        if (collision.hitCheck!=-1&&NoteManager.noteCnt>=1)//검사 후 돌 상태 -1로 돌려놓기.
         {
-            timeVal=theTimingManager.CheckTiming();//가장 맞는 것 부터 0 1 2 3
-            Debug.Log("time return "+timeVal);
+            timeVal=CheckTiming();//가장 맞는 것 부터 0 1 2 3
             //if (TimingManager.noteAns == collision.hitCheck)
             if (AnsManager.CurrentAns == collision.hitCheck)
             {
                 feedbackAnim();
                 playScore += (10 - timeVal * 2);//점수를 더해서 넣어준다.
+                collision.hitCheck = -1;
             }
-            collision.hitCheck = -1;//검사 완료 후 돌 상태 -1로 돌려놓기
+            else
+                collision.hitCheck = -1;//검사 완료 후 돌 상태 -1로 돌려놓기
         }
 
         if (OVRInput.GetDown(OVRInput.Button.Two, OVRInput.Controller.Touch))
         {
             SceneManager.LoadScene("RealMain");
         }
-        if (OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.Touch)){//타이머 이니셜라이즈 여기서
+        if (OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.Touch)&&timer_init!=true){//타이머 이니셜라이즈 여기서
             SoundSystem.song_init();
             NoteManager.currentTimeNote = Data.songDelays[Data.selected_song]+1.5f+ Data.usersyncDelay;
             NoteManager.currentTimeSnare = Data.songDelays[Data.selected_song] + Data.snareDelays[Data.selected_song] + Data.usersyncDelay;
@@ -84,5 +86,24 @@ public class PlayerInput : MonoBehaviour
 
         //파티클 실행
         particles[collision.hitCheck].Play();
+    }
+
+    public int CheckTiming()
+    {
+        //작은게 perfect, good cool bad 0123
+        double interval=Math.Abs(Data.hit_tsample-Data.answers_tsample[Data.selected_song][NoteManager.noteCnt-1]);
+        if(interval<=1000){
+            return 0;
+        }
+        if(interval<=3000){
+            return 1;
+        }
+        if(interval<=7000){
+            return 2;
+        }
+        if(interval<=13000){
+            return 3;
+        }
+        return 4;//miss
     }
 }

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 1e37d0fce4e69da41885a660fa7a0ddb
+  - enabled: 1
     path: Assets/Scenes/Dictionary.unity
     guid: ec24ad79a64f84ef5950f293dcd20136
   - enabled: 1
@@ -20,13 +23,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/sync.unity
     guid: 2e81f9f5fb1908a45bb9d232e78cf93f
-  - enabled: 1
-    path: Assets/Scenes/freeplay.unity
-    guid: 9254846d56c2f494dbd1292d24d3d882
-  - enabled: 1
-    path: Assets/Scenes/Intro.unity
-    guid: 1e37d0fce4e69da41885a660fa7a0ddb
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Loading.unity
     guid: a4bfcd34a3dfaef48bc3d1f369252592
+  - enabled: 1
+    path: Assets/Scenes/Ranking.unity
+    guid: beb6ddac35d9812429844fac1675ee0b
   m_configObjects: {}

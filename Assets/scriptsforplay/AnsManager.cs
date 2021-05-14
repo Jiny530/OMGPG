@@ -6,17 +6,6 @@ public class AnsManager : MonoBehaviour
 {
     public static int CurrentAns=16;
     
-    private void OnTriggerEnter2D(Collider2D col)
-    { 
-        //TimingManager.noteAns=col.GetComponent<Note>().ans;
-        CurrentAns = col.GetComponent<Note>().ans;
-    }
-    private void OnTriggerExit2D(Collider2D col)
-    {
-        //TimingManager.noteAns=16;
-        CurrentAns = 16;
-
-    }
 }
 //콜라이더로하지않고 할 수 있는 방법:
 /*생성되는 간격= BPM 한 번 생기고 나면 지나가는 속도는 동일, 그러면 생성 후 어느 지점을 지나가는

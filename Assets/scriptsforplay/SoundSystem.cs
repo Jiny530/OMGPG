@@ -9,12 +9,14 @@ public class SoundSystem : MonoBehaviour
 
     public static AudioSource pgMusic;
     public static AudioSource bgm;
+    public static double note_term;
 
     void Start(){
         pgMusic=pgMusics[Data.selected_song];
         bgm=bgms[Data.selected_song];
         pgMusic.volume = Data.volumes[0];
         bgm.volume = Data.volumes[1];
+        note_term=Data.note_terms[Data.selected_song];
     }
     public static void song_init()
     {
@@ -25,6 +27,11 @@ public class SoundSystem : MonoBehaviour
     void Update(){
         if(PlayerInput.timer_init==true){
             bgm.timeSamples=pgMusic.timeSamples;
+        }
+        if(Data.answers_tsample[Data.selected_song][NoteManager.noteCnt]-bgm.timeSamples<=note_term){
+            NoteManager.noteCnt++;
+            AnsManager.CurrentAns=Data.answers[Data.selected_song][NoteManager.noteCnt-1];
+            //Debug.Log("updated ans : "+Data.answers[Data.selected_song][NoteManager.noteCnt-1]);
         }
     }
 }
