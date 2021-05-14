@@ -13,12 +13,12 @@ public class NoteManager : MonoBehaviour
 
     //노트 생성을 위한 변수
     public static int noteCnt;
-    float bpm =Data.bpms[Data.selected_song];
+   // float bpm =Data.bpms[Data.selected_song];
     int hit_term = Data.hit_terms[Data.selected_song];
-    public static double currentTimeNote;
-    public static double currentTimeSnare;
-    [SerializeField] Transform tfNoteAppear = null; //노트가 생겨날 위치
-    [SerializeField] GameObject goNote = null;
+   // public static double currentTimeNote;
+   // public static double currentTimeSnare;
+  //  [SerializeField] Transform tfNoteAppear = null; //노트가 생겨날 위치
+  //  [SerializeField] GameObject goNote = null;
    // TimingManager theTimingManager;
 
     //노래가 끝나면 팝업을 띄우기 위햔 변수
@@ -46,8 +46,8 @@ double sampleT;
 
         if(PlayerInput.timer_init==true){
 
-            currentTimeNote += Time.deltaTime;
-            currentTimeSnare += Time.deltaTime;
+            //currentTimeNote += Time.deltaTime;
+           // currentTimeSnare += Time.deltaTime;
 
             if (noteCnt >= Data.answers[Data.selected_song].Length){
                 delay +=Time.deltaTime;
@@ -59,32 +59,33 @@ double sampleT;
                 }
             }
 
-            if (currentTimeSnare >= 60d*hit_term / bpm && num < Data.answers[Data.selected_song].Length){
+            //if (currentTimeSnare >= 60d*hit_term / bpm && num < Data.answers[Data.selected_song].Length){
+            if ((Data.answers_tsample[Data.selected_song][num]-SoundSystem.bgm.timeSamples)<88199 && num < Data.answers[Data.selected_song].Length){
             // 다음 비트 나올 간격이 지나면 다음올가미도 활성화
             //snare_effect(Note.tmpAns[num]);
-                snares[Data.answers[Data.selected_song][num]].SetActive(true); //이 라인에서 "IndexOutOfRangeException: Index was outside the bounds of the array." 이런 에러 남. 근데 작동은 정상적이긴 해.
-                currentTimeSnare -= 60d*hit_term / bpm;
+                snares[Data.answers[Data.selected_song][num]].SetActive(true); 
+                //currentTimeSnare -= 60d*hit_term / bpm;
                 num++;
             }
-            if((AnsManager.CurrentAns>=12||AnsManager.CurrentAns<=3)&&AnsManager.CurrentAns!=16)
-                indicatorR();
-            else if(AnsManager.CurrentAns!=16)
-                indicatorL();
-            else
-                indicatorOff();
+            //if((AnsManager.CurrentAns>=12||AnsManager.CurrentAns<=3)&&AnsManager.CurrentAns!=16)
+               // indicatorL();
+           // else if(AnsManager.CurrentAns!=16)
+               // indicatorR();
+           // else
+           //     indicatorOff();
         }
     }
 
 
     public void indicatorL(){
-        if(head.localRotation.y>0.1){//왼쪽으로 가야 할 때
+        if(head.localRotation.y<-0.1){//왼쪽으로 가야 할 때
             right.SetActive(true);
         }
         else
             right.SetActive(false);   
     }
     public void indicatorR(){
-        if(head.transform.localRotation.y<-0.1){//오른쪽으로 가야 할 때
+        if(head.transform.localRotation.y>0.1){//오른쪽으로 가야 할 때
             left.SetActive(true);
         }
         else

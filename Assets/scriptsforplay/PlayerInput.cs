@@ -69,8 +69,8 @@ public class PlayerInput : MonoBehaviour
         }
         if (OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.Touch)&&timer_init!=true){//타이머 이니셜라이즈 여기서
             SoundSystem.song_init();
-            NoteManager.currentTimeNote = Data.songDelays[Data.selected_song]+1.5f+ Data.usersyncDelay;
-            NoteManager.currentTimeSnare = Data.songDelays[Data.selected_song] + Data.snareDelays[Data.selected_song] + Data.usersyncDelay;
+            //NoteManager.currentTimeNote = Data.songDelays[Data.selected_song]+1.5f+ Data.usersyncDelay;
+           // NoteManager.currentTimeSnare = Data.songDelays[Data.selected_song] + Data.snareDelays[Data.selected_song] + Data.usersyncDelay;
             timer_init=true;
         }
     }
@@ -85,7 +85,7 @@ public class PlayerInput : MonoBehaviour
         judgePrefab[timeVal].SetActive(true);//나타나기.
 
         //파티클 실행
-        particles[collision.hitCheck].Play();
+       // particles[collision.hitCheck].Play();
     }
 
     public int CheckTiming()

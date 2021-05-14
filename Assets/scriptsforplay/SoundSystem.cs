@@ -28,7 +28,7 @@ public class SoundSystem : MonoBehaviour
         if(PlayerInput.timer_init==true){
             bgm.timeSamples=pgMusic.timeSamples;
         }
-        if(Data.answers_tsample[Data.selected_song][NoteManager.noteCnt]-bgm.timeSamples<=note_term){
+        if(Data.answers_tsample[Data.selected_song][NoteManager.noteCnt]-bgm.timeSamples<=note_term&& NoteManager.noteCnt < Data.answers[Data.selected_song].Length){
             NoteManager.noteCnt++;
             AnsManager.CurrentAns=Data.answers[Data.selected_song][NoteManager.noteCnt-1];
             //Debug.Log("updated ans : "+Data.answers[Data.selected_song][NoteManager.noteCnt-1]);
