@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class Data : MonoBehaviour
 {
@@ -40,4 +41,6 @@ public class Data : MonoBehaviour
 
     public static float[] volumes = {0.5f, 0.5f, 0.5f}; // 편경, 배경음악, 버튼 볼륨
     public static double hit_tsample;
+    public static List<UserRank> userList = new List<UserRank>();
+    List<UserRank> sortedList = new List<UserRank>();
 }
