@@ -57,7 +57,6 @@ public class KeyboardScript : MonoBehaviour
         //텍스트필드 내용 저장
         if (TMPtext.text.Length > 0)
         {
-            Debug.Log("들어옴");
             // 유저 닉네임변수 = TMPtext.text;
             //rect.position = new Vector3((float)-2.7, 18, 0);
             completeUI.SetActive(false);
@@ -65,10 +64,8 @@ public class KeyboardScript : MonoBehaviour
             rect.sizeDelta = new Vector2(rect.sizeDelta.x, 545);
             CloseAllLayouts();
         }
-        Debug.Log("뭐임");
         
         //ui 원상복귀, 끄고, 랭킹저장, 랭킹 ui 띄우기
-        
 
     }
 
