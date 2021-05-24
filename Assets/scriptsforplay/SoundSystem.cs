@@ -12,7 +12,9 @@ public class SoundSystem : MonoBehaviour
     public static double note_term;
 
     void Start(){
+        Debug.Log(Data.selected_song);
         pgMusic=pgMusics[Data.selected_song];
+        
         bgm=bgms[Data.selected_song];
         pgMusic.volume = Data.volumes[0];
         bgm.volume = Data.volumes[1];

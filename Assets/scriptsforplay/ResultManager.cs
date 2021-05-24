@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class ResultManager : MonoBehaviour
 {
+    /*
     [SerializeField] GameObject Level_completed;
     [SerializeField] GameObject Level_failed;
     [SerializeField] GameObject PG;
     [SerializeField] GameObject laser;
     [SerializeField] GameObject gaktoe;
-    [SerializeField] Transform leaserPos;
+    [SerializeField] Transform leaserPos;*/
 
     public Text finalScore;
     public Text bestScore;
@@ -22,14 +23,16 @@ public class ResultManager : MonoBehaviour
     public Vector3 tmp;
     
     void Start(){
-        PG.SetActive(true);
-        gaktoe.SetActive(true);
+        //PG.SetActive(true);
+        //gaktoe.SetActive(true);
+        Debug.Log(Data.selected_song);
     }
     // Update is called once per frame
     void Update()
     {
         if (NoteManager.finished)
         {
+            //Debug.Log(Data.selected_song);
             SetBoard();
             /*
             Level_completed.SetActive(true);

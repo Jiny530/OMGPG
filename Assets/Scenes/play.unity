@@ -1625,8 +1625,6 @@ MonoBehaviour:
   right: {fileID: 1518129593}
   left: {fileID: 668344667}
   head: {fileID: 2072190412}
-  tfNoteAppear: {fileID: 1997422583}
-  goNote: {fileID: 9084493388823596029, guid: db941a13c64df6843b358fa5326a48cb, type: 3}
   snares:
   - {fileID: 1979692464}
   - {fileID: 102044519}
@@ -7585,7 +7583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 422740, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.20000005
+      value: 0.037
       objectReference: {fileID: 0}
     - target: {fileID: 422740, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
       propertyPath: m_LocalRotation.w
