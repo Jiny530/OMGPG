@@ -38,6 +38,7 @@ double sampleT;
        // theTimingManager = GetComponent<TimingManager>();
         noteCnt=0;//로드시마다 초기화.
         num=0;
+        
     }
 
     void Update()
