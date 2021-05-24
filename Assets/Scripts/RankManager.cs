@@ -17,8 +17,8 @@ public class RankManager : MonoBehaviour
     public GameObject TextField;
     private TextMeshProUGUI TMPtext;
     int idx = 1;
-    int song = Data.selected_song;
-    
+    public static int cur_song;
+
     void Awake()
     {
         for (int i = 0; i < 3; i++)
@@ -30,6 +30,7 @@ public class RankManager : MonoBehaviour
     void Start()
     {
         TMPtext = TextField.GetComponent<TextMeshProUGUI>();
+        cur_song = Data.selected_song;
         //newRecord();
         //Debug.Log(Data.selected_song);
     }
@@ -40,11 +41,11 @@ public class RankManager : MonoBehaviour
         record.ID = TMPtext.text;
         record.score = PlayerInput.playScore;
         record.index = Data.userList.Count; //점수가 같을 경우 더 빠른점수를 상위랭크로 매길 때 사용
-        Data.userList[song].Add(record);
+        Data.userList[cur_song].Add(record);
         // 점수 내림차순 정렬 후 들어온 순서대로 오름차순 정렬
-        Data.userList[song] = Data.userList[song].OrderByDescending(x => x.score).ThenBy(x => x.index).ToList(); 
+        Data.userList[cur_song] = Data.userList[cur_song].OrderByDescending(x => x.score).ThenBy(x => x.index).ToList(); 
 
-        foreach (var rank in Data.userList[song])
+        foreach (var rank in Data.userList[cur_song])
         {
             if (idx > 10) break;
             show_ranking(rank, idx);

@@ -2079,7 +2079,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 485107729}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.05999998, z: -0.044999957}
+  m_LocalPosition: {x: -0.002, y: 0, z: 0.093}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 996394400}
@@ -4244,7 +4244,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &826919061
 GameObject:
   m_ObjectHideFlags: 0
@@ -4366,17 +4366,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec583cc5bdd4bd4b975478b670a2d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level_completed: {fileID: 1992249961}
-  Level_failed: {fileID: 0}
-  PG: {fileID: 0}
-  laser: {fileID: 0}
-  gaktoe: {fileID: 0}
-  leaserPos: {fileID: 0}
   finalScore: {fileID: 1958800183}
   bestScore: {fileID: 0}
   newReward: {fileID: 0}
-  left: {fileID: 777614191}
-  center: {fileID: 1913516808}
+  left: {fileID: 1913516808}
+  center: {fileID: 777614191}
   right: {fileID: 1548677275}
   tmp: {x: 0, y: 0, z: 0}
 --- !u!114 &837855566
@@ -4458,6 +4452,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  Canvas: {fileID: 0}
   particles:
   - {fileID: 0}
   - {fileID: 0}
@@ -8054,7 +8049,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &1605142486
 GameObject:
   m_ObjectHideFlags: 0
@@ -9938,7 +9933,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &1917172184
 GameObject:
   m_ObjectHideFlags: 0
@@ -11018,7 +11013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 422740, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.095
+      value: -0.037
       objectReference: {fileID: 0}
     - target: {fileID: 422740, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
       propertyPath: m_LocalRotation.w

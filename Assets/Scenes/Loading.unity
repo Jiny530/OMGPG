@@ -1592,7 +1592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 143, y: 61}
+  m_AnchoredPosition: {x: 126, y: 61}
   m_SizeDelta: {x: 446.90613, y: 108.44078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1910378521
@@ -1627,7 +1627,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Press this button\n to stop the game."
+  m_Text: 'Press B button
+
+    to stop the game.'
 --- !u!222 &1910378522
 CanvasRenderer:
   m_ObjectHideFlags: 0
