@@ -1,10 +1,10 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class Data : MonoBehaviour
 {
-    public static string[] song_list = {"Free", "상사화", "Hedwig's Theme" };
+    public static string[] song_list = {"Free", "Sang-Sa-Hwa", "Hedwig's Theme" };
     public static float[] speed = { 0f, 1f, 2f }; //곡마다 올가미 줄어드는 속도!
     public static int[] bpms = { 105, 107, 158, 0 };
     public static double[] songDelays = { 0, -13.4, -2.5 };
@@ -22,7 +22,7 @@ public class Data : MonoBehaviour
         new[] {665301.6, 739938.3, 812614.6, 885683.0, 959379.3, 1033702.6, 1107477.3, 1179056.6, 1252909.3, 1327154.3, 1400694.0, 1473840.3, 1548006.6, 1618645.0, 1694066.0},//상사화
         new[] {5.0, 5.0, 10.0, 7.0, 5.0, 4.0, 12.0, 16.0, 5.0, 5.0, 15.0, 13.0, 13.0, 11.0, 5.0, 16.0, 12.0, 12.0, 13.0, 11.0, 8.0, 11.0, 12.0, 16.0, 12.0, 12.0, 15.0, 13.0, 11.0, 5.0}//해리포터
     };
-    public static int[] best_scores = { 0, 1, 2, 3, 4 };
+    public static int[] best_scores = { 0, 0, 0};
     public static int[] max_scores = { 0, 150, 270 };
 
     public static bool[] acquired_stone= { true, false, true, false, false, false };

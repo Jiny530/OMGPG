@@ -32,7 +32,7 @@ public class ResultManager : MonoBehaviour
     {
         if (NoteManager.finished)
         {
-            //Debug.Log(Data.selected_song);
+            Data.selected_song = RankManager.cur_song;
             SetBoard();
             /*
             Level_completed.SetActive(true);
