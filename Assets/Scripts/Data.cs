@@ -7,9 +7,9 @@ public class Data : MonoBehaviour
     public static string[] song_list = {"Free", "Sang-Sa-Hwa", "Hedwig's Theme" };
     public static float[] speed = { 0f, 1f, 2f }; //곡마다 올가미 줄어드는 속도!
     public static int[] bpms = { 105, 107, 158, 0 };
-    public static double[] songDelays = { 0, -13.4, -2.5 };
+    public static double[] songDelays = { 0, -13.4, -3.5 };
     public static double[] snareDelays={0,2d,2d};
-    public static int[] hit_terms = { 4, 3, 3 };
+    public static int[] hit_terms = { 0, 88199, 44099 };
     public static double[] note_terms={4,40000,20000};
     public static int[][] answers = new[]
     {
@@ -20,7 +20,7 @@ public class Data : MonoBehaviour
     public static double[][] answers_tsample = new[]{
         new[] {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0},//sync
         new[] {665301.6, 739938.3, 812614.6, 885683.0, 959379.3, 1033702.6, 1107477.3, 1179056.6, 1252909.3, 1327154.3, 1400694.0, 1473840.3, 1548006.6, 1618645.0, 1694066.0},//상사화
-        new[] {5.0, 5.0, 10.0, 7.0, 5.0, 4.0, 12.0, 16.0, 5.0, 5.0, 15.0, 13.0, 13.0, 11.0, 5.0, 16.0, 12.0, 12.0, 13.0, 11.0, 8.0, 11.0, 12.0, 16.0, 12.0, 12.0, 15.0, 13.0, 11.0, 5.0}//해리포터
+        new[] {117520.6, 162208.6, 214187.3, 266010,316264, 360638.6, 412304.3, 462402,512499.6,561059.3, 611832.3, 662870.6, 711243.3, 758205.3,809714, 859576.3, 909438.6, 959536.6, 1007909.3, 1058085.3,1108104.6,1155814.3, 1208142.6,1257574, 1307005.3, 1355299.3, 1405554,1505043.60,1552318.6, 1603671}//해리포터
     };
     public static int[] best_scores = { 0, 0, 0};
     public static int[] max_scores = { 0, 150, 270 };

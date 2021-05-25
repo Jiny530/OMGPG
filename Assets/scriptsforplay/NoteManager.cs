@@ -61,7 +61,7 @@ double sampleT;
             }
 
             //if (currentTimeSnare >= 60d*hit_term / bpm && num < Data.answers[Data.selected_song].Length){
-            if ((Data.answers_tsample[Data.selected_song][num]-SoundSystem.bgm.timeSamples)<88199 && num < Data.answers[Data.selected_song].Length){
+            if ((Data.answers_tsample[Data.selected_song][num]-SoundSystem.bgm.timeSamples)<Data.hit_terms[Data.selected_song] && num < Data.answers[Data.selected_song].Length){
             // 다음 비트 나올 간격이 지나면 다음올가미도 활성화
             //snare_effect(Note.tmpAns[num]);
                 snares[Data.answers[Data.selected_song][num]].SetActive(true); 

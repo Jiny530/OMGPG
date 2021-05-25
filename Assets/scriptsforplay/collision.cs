@@ -77,6 +77,7 @@ public class collision : MonoBehaviour
         }
         Data.hit_tsample=SoundSystem.bgm.timeSamples;
         hit_duration = 0f;
+        Debug.Log("&&&&&&&&&&HIT TIME:  "+SoundSystem.bgm.timeSamples);
     }
 
     void Vibrate(float ms)
