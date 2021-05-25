@@ -24,7 +24,7 @@ public class KeyboardScript : MonoBehaviour
     {
 
         if (TMPtext.text == "Enter Name") TMPtext.text = "";
-        TMPtext.text=TMPtext.text + alphabet;
+        if (TMPtext.text.Length < 10) TMPtext.text=TMPtext.text + alphabet;
 
     }
 
