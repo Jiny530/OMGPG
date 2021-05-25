@@ -159,9 +159,10 @@ public class LazerPointer : MonoBehaviour {
             }
         }
 
-        else
+        /*else
             raycastHit.collider.gameObject.GetComponent<Scrollbar>().OnPointerEnter(null);
 
         currentRay = raycastHit.collider.gameObject;
+        */
     }
 }

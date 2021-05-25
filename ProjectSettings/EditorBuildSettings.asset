@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/play.unity
     guid: 2d076dcbdf838cb49bc1990e3ea0dc92
   - enabled: 1
+    path: Assets/Scenes/freeplay.unity
+    guid: cf82d67bae948f142b2c6d5fb069b110
+  - enabled: 1
     path: Assets/Scenes/Storage.unity
     guid: 3673f67efd309a04e84f30bb78957041
   - enabled: 0

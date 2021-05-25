@@ -22,6 +22,7 @@ TagManager:
   - pg15
   - Note
   - Button
+  - Scrollbar
   layers:
   - Default
   - TransparentFX
