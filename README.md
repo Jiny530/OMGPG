@@ -1,23 +1,19 @@
 OMGPG - VR 국악기 연주 프로그램
 ======
-### 시연 영상 링크 
-https://www.youtube.com/watch?v=lb8Tq72X9dQ
+### 프로젝트 소개 및 시연 영상
+https://youtu.be/DshW40bKNcw
     
  
  
-### 프로젝트 목적 
+### 프로젝트 목적
 
-   한국의 전통 음악은 교육을 위한 여러 노력에도 불구하고, 실제 악기를 연주 할 수 있는 기회가 드물어 사람들에게 유물로 여겨지곤 한다.
-
-   한국의 전통 악기 중, 특히 제작하기 어려운 ‘편경’이라는 국악 타악기를 VR상의 악기로 구현하여 보다 현실적인 연주 체험이 가능하게 한다. 
-   게임의 형식을 취하여 다양한 난이도의 음악으로 연주를 체험할 수 있게 하여 관심도를 끌어올린다. 이는 주 타겟층인 학생들과 국악에 관심이 있는 플레이어들의 지속적인 연주 학습이 가능하게 한다.
-
-   더 발전하여, 가상환경에서 개량을 도모하여 다양한 음역대를 연주 할 수 있도록 하고, 전공자조차 악기의 희소성 때문에 연주하지 못하는 상황을 가상악기 보급으로 극복한다.
-  
+    VR을 이용하여 희소성이 높은 대형 국악기에 대한 접근성을 높이고, 궁중 국악기가 유물이라는 인식을 개선한다.
+    더불어, 다양한 국악기를 소개하고 연주할 수 있도록 함으로써 국악의 세계화에 기여한다.
+    
+    이를 위해, 최대한 실제와 같이 현실적인 악기를 구현하고 게임적인 요소를 부여하여 악기를 즐겁고 자연스럽게 연주할 수 있도록 유도하였다.
   
 * 쉽게 접하기 힘든 대형 타악기를 실제크기로 실감나게 연주
-* 악기의 엔터테인 요소를 활용하여 초등학생, 외국인의 흥미유발
-* 스테이지 클리어 - 리워드 형식을 도입하여 국악지식 전달 및 성취감유발  
+* 곡 연주 모드를 활용하여 초등학생, 외국인 등의 사용자가 자연스럽게 연주법을 습득하도록 유도
   
   
   
@@ -32,75 +28,36 @@ https://www.youtube.com/watch?v=lb8Tq72X9dQ
     
 ### 팀원 기술블로그
 
-
-* VR 개발환경 세팅 및 유니티 연동    
-  https://mustardy.tistory.com/3
-    
-* VR 컨트롤러 기초 및 세팅  
-  https://kyudinglab.tistory.com/2  
-    
-* Unity 물리엔진을 이용한 오브젝트 충돌 이벤트 처리  
-  https://hye-genius.tistory.com/3  
   
-* 3D 오브젝트 모델링 및 텍스쳐 변경  
-  https://cherish-my-codes.tistory.com/entry/%EC%A1%B8%EC%97%85%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-3D-%EB%AA%A8%EB%8D%B8%EB%A7%81-%ED%85%8D%EC%8A%A4%EC%B2%98-%EC%9E%85%ED%9E%88%EA%B8%B0
+ * 김규원 -  https://kyudinglab.tistory.com
+ * 
+ * 김채린 -  https://cherish-my-codes.tistory.com
+ * 
+ * 박혜진 -  https://hye-genius.tistory.com
+ * 
+ * 유예원 -  https://mustardy.tistory.com
   
-  
-  
-  
+ 
+ 
 ### Reference
 
 * VR 개발환경 세팅 및 유니티 연동    
 
-  set up development environment. <https://developer.oculus.com/documentation/unity/book-unity-gsg/>
+  set up development environment.  <https://developer.oculus.com/documentation/unity/book-unity-gsg/>
 
-  오큘러스-유니티 메뉴얼   <https://docs.unity3d.com/kr/2018.4/Manual/VRDevices-Oculus.html>
+  오큘러스-유니티 메뉴얼  <https://docs.unity3d.com/kr/2018.4/Manual/VRDevices-Oculus.html>
 
-  quest로 빌드하는 과정.   <https://you-rang.tistory.com/351>
+  세부 조정  <https://developer.oculus.com/documentation/unity/book-unity-gsg/>
 
-  go로 개발자 모드로 빌드하는 과정.   <https://bradbury.tistory.com/105>
-
-  기어 VR 세팅
-  <https://happysalmon.tistory.com/6>
-
-  기어 관련 디테일 세팅
-  <https://mingyu0403.tistory.com/24>
-
-  세부 조정
-  <https://developer.oculus.com/documentation/unity/book-unity-gsg/>
-
-
-* VR 컨트롤러 기초 및 세팅
-
-  컨트롤러 플러그인 세팅
-  <https://youtu.be/NXDDRFzlzIQ>
-
-  기본 상대 위치 세팅
-  <https://youtu.be/-0S1Fk9tSeA>
-
-  햅틱이벤트
-  자이로스코프 조절
-  <https://rokka.kr/26>
 
 * Unity 물리엔진을 이용한 오브젝트 충돌 이벤트 처리  
 
-  유니티 메뉴얼
-  <https://docs.unity3d.com/Manual/class-ConfigurableJoint.html>
-
-  Collider 컴포넌트로 충돌 확인
-  <https://wergia.tistory.com/217>
+  유니티 메뉴얼  <https://docs.unity3d.com/Manual/class-ConfigurableJoint.html>
 
 
 * 3D 오브젝트 모델링 및 텍스쳐 변경  
 
-  3D 모델링 참고
-  <https://youtu.be/kdtLtBt9dJY>
+  텍스쳐 도입  <https://docs.unity3d.com/Manual/Textures.html>
+  
 
-  모델링 프로그램 활용
-  <https://www.3dflow.net/3df-zephyr-free/>
-  <https://skfb.ly/6nDFK>
-  
-  텍스쳐 도입
-  <https://docs.unity3d.com/Manual/Textures.html>
-  
 
