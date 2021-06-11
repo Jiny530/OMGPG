@@ -21,7 +21,7 @@ https://youtu.be/DshW40bKNcw
 ### 예상 시나리오
 
 
-![프로그램 개략도](https://user-images.githubusercontent.com/53827279/101482434-13828600-399a-11eb-8519-cb828d5d67c6.png)  
+![프로그램 개략도](https://user-images.githubusercontent.com/53827279/121624040-bfbd3a80-caab-11eb-9fcd-ae2bb896fe73.png)
   
     
     
