@@ -57,28 +57,28 @@ public class selected_thema : MonoBehaviour
     }
     public void stick_select(int index)
     {
-        if (Data.acquired_stick[index] == true){
-        sticks[Data.stick].SetActive(false);
-        Data.stick = index;
-        sticks[index].SetActive(true);
+        if (index < 4){
+            sticks[Data.stick].SetActive(false);
+            Data.stick = index;
+            sticks[index].SetActive(true);
         }
     }
 
     public void frame_select(int index)
     {
-        if (Data.acquired_frame[index] == true){
-        frames[Data.frame].SetActive(false);
-        Data.frame = index;
-        frames[index].SetActive(true);
+        if (index < 4){
+            frames[Data.frame].SetActive(false);
+            Data.frame = index;
+            frames[index].SetActive(true);
         }
     }
 
     public void stone_select(int index)
     {
-        if (Data.acquired_stone[index] == true){
-        stones[Data.stone].SetActive(false);
-        Data.stone = index;
-        stones[index].SetActive(true);
+        if (index < 4){
+            stones[Data.stone].SetActive(false);
+            Data.stone = index;
+            stones[index].SetActive(true);
         }
     }
 
